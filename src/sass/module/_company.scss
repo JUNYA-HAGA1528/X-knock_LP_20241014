@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.company{
+    text-align: center;
+}
+
+.company__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(25);
+    @include mq(md) {
+        max-width: rem(1166);
+        padding: 0 rem(30);
+    }
+}
+
+.company__title{
+    font-size: rem(36);
+    font-weight: $bold;
+}
+
+.company__title-font{
+    font-size: rem(40);
+}
+
+.company__title-color{
+    color: $green;
+    font-size: rem(40);
+}
+
+.company__line{
+    width: rem(346);
+    height: rem(7.3);
+    margin: rem(22.1) auto 0;
+}
