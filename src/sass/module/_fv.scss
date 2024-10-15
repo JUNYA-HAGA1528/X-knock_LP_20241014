@@ -1,0 +1,203 @@
+@use "global" as *;
+
+.fv{
+    background-color: $white;
+    border-radius: rem(20) rem(20) 0 0;
+    padding: 0 0 rem(100) ;
+}
+
+.fv__head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fv-logo{
+    padding-top: rem(16);
+    padding-left: rem(20);
+    @include mq(md) {
+        padding-left: rem(66);
+    }
+}
+
+.fv-logo img{
+    width: rem(135);
+    height: rem(34);
+    @include mq(md) {
+        width: rem(259);
+        height: rem(65);
+    }
+}
+
+
+.fv__main{
+    max-width: $max-width;
+    margin: 0 auto;
+    position: relative;
+    @include mq(md) {
+        max-width: rem(1440);
+    }
+}
+
+.fv__main::before{
+    background-image: url('../images/common/fv-human.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(65);
+    right: calc(50% - min(50.8%, rem(800)));
+    width: 78%;
+    height: 95.5%;
+    z-index: 1;
+    @include mq(md) {
+        right: calc(50% - min(50.5%, rem(800)));
+        width: 39%;
+        height: 72.5%;
+    }
+}
+
+.fv__main-content{
+    position: relative;
+}
+
+.fv__main-bg{
+    width: 92%;
+    margin: rem(10) auto 0;
+    @include mq(md) {
+        width: 84.3%;
+        margin: rem(17) auto 0;
+    }
+}
+
+.fv__main-sentence{
+    position: absolute;
+    top: 15%;
+    left: 9.8%;
+    font-weight: $bold;
+    z-index: 10;
+    @include mq(md) {
+        top: 10%;
+    }
+}
+
+.fv__main-title{
+    font-size: rem(24);
+    padding-bottom: rem(10);
+    @include mq(md) {
+        font-size: rem(46);
+        padding: 0;
+    }
+}
+
+.fv__main-title-orange{
+    color: $orange;
+    font-size: rem(32);
+    @include mq(md) {
+        font-size: rem(61.33);
+    }
+}
+
+.fv__main-title-green{
+    color: $green;
+    font-size: rem(32);
+    @include mq(md) {
+        font-size: rem(64);
+    }
+}
+
+.fv__main-title-font{
+    font-size: rem(24);
+    @include mq(md) {
+        font-size: rem(56);
+    }
+}
+
+.fv__sub-title{
+    font-size: rem(24);
+    line-height: 1.375;
+    @include mq(md) {
+        font-size: rem(45);
+    }
+}
+
+.fv__sub-title-font{
+    font-size: rem(20);
+    @include mq(md) {
+        font-size: rem(45);
+    }
+}
+
+mark {
+    background: linear-gradient(transparent 90%, #F5EC10 0%);
+    background-position-y: -5px; /* 上に3px移動 */
+    background-repeat: no-repeat; /* 繰り返しを防止 */
+}
+
+.fv__main-wrapper{
+    position: relative;
+    z-index: 1;
+}
+
+.fv__main-map{
+    position: absolute;
+    top: 84px;
+    left: 8%;
+    width: 53.75%;
+    @include mq(md) {
+        top: 65px;
+        width: 29.75%;
+    }
+}
+
+
+
+
+.fv__area {
+    background-color: #AFBC34;
+    display: inline-block;
+    border-top-right-radius: 120px; /* 右上の角を丸く */
+    border-bottom-right-radius: 120px; /* 右下の角を丸く */
+    margin-top: rem(-30);
+    padding: rem(11.67) rem(36.39) rem(15.47) rem(11.8);
+    position: relative;
+    z-index: 10;
+    @include mq(md) {
+        margin-top: rem(-150);
+        padding: rem(23) rem(76) rem(32) rem(24);
+    }
+}
+
+.fv__area-list{
+    display: flex;
+    justify-content: center;
+    gap: rem(9.67);
+    margin-top: rem(7.76);
+    @include mq(md) {
+        gap: rem(20);
+        margin-top: rem(17);
+    }
+}
+
+.fv__area-title img {
+    width: rem(266);
+    height: rem(29.5);
+    @include mq(md) {
+        width: rem(550);
+        height: rem(61);
+    }
+}
+
+.fv__area-item img {
+    width: rem(48.36);
+    height: rem(48.36);
+    @include mq(md) {        
+        width: rem(100);
+        height: rem(100);
+    }
+}
+
+
+
+
+

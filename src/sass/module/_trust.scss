@@ -64,14 +64,14 @@
 }
 
 .trust__title-top::before {
-    left: -12%;
+    left: -15%;
     @include mq(md) {
         left: -52%;
     }
 }
 
 .trust__title-top::after {
-    right: -12%;
+    right: -15%;
     @include mq(md) {
         right: -52%;
     }

@@ -1,2 +1,118 @@
 @use "global" as *;
 
+.now{
+    background-color: $white;
+    text-align: center;
+    padding: rem(51) 0 rem(60.8);
+    @include mq(md) {
+        padding: rem(125) 0 rem(120.93);
+    }
+}
+
+.now__bg{
+    max-width: $max-width;
+    margin: 0 auto;
+    position: relative;
+    @include mq(md) { 
+        max-width: rem(1440);
+    }
+}
+
+.now__bg::before{
+    @include mq(md) {   
+        background-image: url('../images/common/now-bg.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        content: "";
+        top: rem(495);
+        left: calc(50% - min(50%, rem(800)));
+        width: 47.5%;
+        height: rem(354);
+    }
+}
+
+.now__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(20);
+    @include mq(md) {
+        max-width: rem(1218);
+    }
+}
+
+.now__content{
+    margin-top: rem(60);
+    @include mq(md) {
+        margin-top: rem(100);
+        display: flex;
+        gap: 0 rem(63);
+    }
+}
+
+.now__wrapper{
+    width: 100%;
+    @include mq(md) {
+        width: 45.41%;
+    }
+}
+
+.now__img{
+    position: relative;
+    z-index: 2;
+    width: calc(100% + rem(20));  // 右側のパディングのみ補正
+    margin: auto; // 左側のパディングはそのまま
+    @include mq(md) {
+        width: 100%;
+    }
+}
+
+.now__img img {
+    aspect-ratio: 306/193;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include mq(md) {
+        aspect-ratio: 535/337;
+    }
+}
+
+.now__img-second{
+    width: calc(100% + rem(20));  // 左側のパディング分補正
+    margin-left: calc(-1 * rem(20)); // 左側のパディングを補正する
+    margin-right: auto; // 右側のパディングや位置はそのまま
+    margin-top: rem(-70);
+
+}
+
+.now__sentence{
+    width: 100%;
+    text-align: left;
+    margin-top: rem(40);
+    padding: 0 rem(5);
+    @include mq(md) {
+        width: 49.23%;
+        margin-top: rem(86);
+        padding: 0;
+    }
+}
+
+.now__text{
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(26/16);
+    letter-spacing: 0.01em;
+    @include mq(md) {
+        font-size: rem(20);
+        line-height: 1.45;
+    }
+}
+
+.now__text + .now__text{
+    margin-top: rem(30);
+}
+
+.now__text-color{
+    color: $orange;
+}

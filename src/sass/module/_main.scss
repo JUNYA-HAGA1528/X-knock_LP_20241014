@@ -1,8 +1,8 @@
 @use "global" as *;
 
 .main{
-    padding: 0 rem(10);
+    padding: rem(10) rem(10) 0;
     @include mq(md) {
-        padding: 0 rem(20);
+        padding: rem(28) rem(20) 0;
     }
 }
