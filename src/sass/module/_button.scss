@@ -1,23 +1,36 @@
 @use "global" as *;
 
-.button__flex{
+.button__box + .button__box{
+    margin-top: rem(7);
     @include mq(md) {
-        display: flex;
-        gap: 0 rem(60);
+        margin-top: rem(10);
     }
 }
 
-.button__link + .button__link{
-    margin-top: rem(20);
+.button__text{
+    color: #AFBC34;
+    font-size: rem(20.78);
+    font-weight: $regular;
+    letter-spacing: 0.04em;
+    @include mq(md) {
+        font-size: rem(22);
+    }
 }
 
-.button__link--margin{
-    margin-top: rem(0);
+.button__text span {
+    color: $green;
+    font-weight: $medium;
+    font-size: rem(15.11);
+    line-height: calc(37.8/15.11);
+    @media screen {
+        font-size: rem(16);
+        line-height: calc(40/16);
+    }
 }
 
 
 
-/*ボタン（赤）*/
+
 .button__item  {
     background: $green;
     position: relative;
@@ -34,6 +47,14 @@
     letter-spacing: 0.01em;
     overflow: hidden;
     text-decoration: underline;
+    @include mq(md) {
+        font-size: rem(18);
+        font-weight: $bold;
+        padding-right: rem(22);
+        letter-spacing: 0.04em;
+        width: rem(300);
+        height: rem(58);    
+    }
 }
 
 .button__item span::after {
@@ -49,12 +70,78 @@
 	height: rem(60);
 	transform: translateY(-50%);
 	transition: 0.4s background-color;
+    @include mq(md) {
+        right: rem(-2);
+        width: rem(60);
+        height: rem(60);
+    }
 }
 
 .button__item:hover{
     box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.5);
     transform: translateY(-5px);
     cursor: pointer;
-  }
+}
 
 
+
+
+
+
+
+
+//trust
+.button__item--trust  {
+    font-size: rem(17);
+    width: rem(283);
+    height: rem(54);
+    border-radius: rem(50);
+    z-index: 1;
+    transition: 0.4s;
+    letter-spacing: 0.01em;
+    overflow: hidden;
+    text-decoration: none;
+    @include mq(md) {
+        font-size: rem(18);
+        width: rem(300);
+        height: rem(58);    
+    }
+}
+
+.button__item--trust-color {
+    background-color: #AFBC34;
+    font-size: rem(17);
+    width: rem(283);
+    height: rem(54);
+    border-radius: rem(50);
+    z-index: 1;
+    transition: 0.4s;
+    letter-spacing: 0.01em;
+    overflow: hidden;
+    text-decoration: none;
+    @include mq(md) {
+        font-size: rem(18);
+        width: rem(300);
+        height: rem(58);    
+    }
+}
+
+.button__item--trust-color span::after {
+	background-image: url(../images/common/button-lowgreen.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+    position: absolute;
+    top: 50%;
+    right: rem(-2);
+    width: rem(60);
+	height: rem(60);
+	transform: translateY(-50%);
+	transition: 0.4s background-color;
+    @include mq(md) {
+        right: rem(-2);
+        width: rem(60);
+        height: rem(60);
+    }
+}

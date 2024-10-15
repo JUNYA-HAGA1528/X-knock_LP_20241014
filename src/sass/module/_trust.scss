@@ -1,0 +1,162 @@
+@use "global" as *;
+
+.trust{
+    text-align: center;
+    background-color: #EDF3DD;
+    padding: rem(107) 0 rem(30) ;
+    @include mq(md) {
+        padding: rem(128) 0 rem(60) ;
+    }
+}
+
+.trust__inner{
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 rem(15);
+    @include mq(md) {
+        max-width: rem(1220);
+        padding: 0 rem(20);
+    }
+}
+
+
+//タイトル
+.trust__head-img img{
+    width: rem(125);
+    height: rem(46.6);
+    margin: 0 auto;
+    @include mq(md) {
+        width: rem(252);
+        height: rem(93.96);
+    }
+}
+
+.trust__title-top{
+    position: relative;
+    font-size: rem(20);
+    font-weight: $bold;
+    display: inline-block;
+    width: rem(286);
+    padding: rem(2) 0;
+    background-color: $white;
+    color: #8BC349;
+    border-radius: rem(60);
+    @include mq(md) {
+        width: rem(577);
+        padding: rem(8) 0;
+        font-size: rem(36);
+    }
+}
+
+.trust__title-top::before,
+.trust__title-top::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: rem(31.67);
+    height: rem(1);
+    background-color: $green;
+    @include mq(md) {
+        top: 50%;
+        width: 48.53%;
+        height: rem(2);
+    }
+}
+
+.trust__title-top::before {
+    left: -12%;
+    @include mq(md) {
+        left: -52%;
+    }
+}
+
+.trust__title-top::after {
+    right: -12%;
+    @include mq(md) {
+        right: -52%;
+    }
+}
+
+.trust__title-bottom{
+    color: $green;
+    font-size: rem(27.7);
+    font-weight: $bold;
+    @include mq(md) {
+        font-size: rem(48);
+    }
+}
+
+.trust__title-bottom span {
+    color: $orange;
+    font-size: rem(36.9);
+    @include mq(md) {
+        font-size: rem(64);
+    }
+}
+
+
+
+
+//リスト
+.trust__list{
+    margin-top: rem(60);
+    @include mq(md){
+        margin-top: rem(40);
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.trust__item{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @include mq(md){
+        max-width: calc(33.3333% - 3.125rem * 2 / 3 );
+        width: 100%;
+    }
+}
+
+.trust__item + .trust__item{
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: 0;
+        margin-left: rem(50);
+    }
+}
+
+/* 枚数が増えたときのための処理 */
+.trust__item:nth-child(3n + 1){
+    @include mq(md){
+        margin-left: 0;
+    }
+}
+
+/* 枚数が増えたときのための処理 */
+.trust__item:nth-child(n + 4){
+    @include mq(md){
+        margin-top: 8.25rem;
+    }
+}
+
+.trust__roof img {
+    aspect-ratio: 340/72;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include mq(md) {
+        aspect-ratio: 357/76;
+    }
+}
+
+.trust__remarks{
+    margin-top: rem(30.37);
+    color: #222222;
+    font-size: rem(12);
+    font-weight: $medium;
+    line-height: calc(20/12);
+    @include mq(md) {
+        margin-top: rem(40);
+        font-size: rem(16);
+    }
+}

@@ -1,0 +1,169 @@
+@use "global" as *;
+
+.trust-card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: rem(18.89) rem(0) rem(56);
+    background-color: $white;
+    @include mq(md) {
+        padding: rem(20) rem(0) rem(60);
+    }
+}
+
+.trust-card__head{
+    background-color: #FEF1DB;
+    color: #FF5C00;
+    font-size: rem(18);
+    font-weight: $semiBold;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    margin: 0 rem(30);
+    padding: rem(6) 0;
+    @include mq(md) {
+        font-size: rem(20);
+    }
+}
+
+.trust-card__review{
+    color: #AFBC34;
+    font-size: rem(30.22);
+    font-weight: $regular;
+    @include mq(md) {
+        font-size: rem(32);
+    }
+}
+
+.trust-card__review span {
+    color: $green;
+    font-size: rem(22.67);
+    font-weight: $semiBold;
+    @include mq(md) {
+        font-size: rem(24);
+    }
+}
+
+.trust-card__companyName{
+    margin-top: rem(6);
+    padding: rem(7.5) 0;
+    background-color: #AFBC34;
+    color: $white;
+    font-size: rem(30.22);
+    font-weight: $bold;
+    @include mq(md) {
+        padding: rem(9.5) 0;
+        font-size: rem(32);
+    }
+}
+
+.trust-card__wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: rem(14.4);
+    padding: 0 rem(28);
+    @include mq(md) {
+        padding: 0 rem(30);
+    }
+}
+
+.trust-card__img{
+    aspect-ratio: 283/182;
+    @include mq(md) {
+        aspect-ratio: 299/193;
+    }
+}
+
+.trust-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trust-card__source{
+    color: #222222;
+    margin-top: rem(10);
+    display: flex;
+    justify-content: center;
+    font-size: rem(9.44);
+    font-weight: $medium;
+    @include mq(md) {
+        font-size: rem(10);
+    }
+}
+
+.trust-card__source-text{
+    text-decoration: underline;
+}
+
+.trust-card__source-text a:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.trust-card__features{
+    margin-top: rem(18);
+    @include mq(md) {
+        margin-top: rem(20);
+    }
+}
+
+.trust-card__features-text{
+    padding: rem(6.5) 0;
+    font-size: rem(18.89);
+    font-weight: $bold;
+    letter-spacing: 0.04em;
+    @include mq(md) {
+        font-size: rem(20);
+    }
+}
+
+.trust-card__list,
+.trust-card__sentence{
+    margin-top: rem(22);
+    @include mq(md) {
+        margin-top: rem(24);
+    }
+}
+
+.trust-card__sentence{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+    background-color: #EDF3DD;
+    padding: rem(18.89) rem(9.44) rem(17.05) rem(8.5);
+    border-radius: rem(4);
+    @include mq(md) {
+        padding: rem(20) rem(10) rem(19) rem(9);
+    }
+}
+
+.trust-card__text{
+    flex-grow: 1;
+    color: $green;
+    font-size: rem(15.11);
+    font-weight: $medium;
+    line-height: 1.67;
+    letter-spacing: 0.01em;
+    @include mq(md) {
+        font-size: rem(16);
+        line-height: 1.665;
+    }
+}
+
+.trust-card__text span {
+    color: $orange;
+    font-size: rem(17);
+    font-weight: $bold;
+    @include mq(md) {
+        font-size: rem(18);
+    }
+}
+
+.trust-card__buttons{
+    margin-top: rem(28.33);
+    @include mq(md) {
+        margin-top: rem(30);
+    }
+}
