@@ -5,10 +5,25 @@
     flex-direction: column;
     justify-content: space-between;
     flex: 1 1 auto;
-    min-height: 100%;
-    padding: rem(28) rem(21) rem(21) rem(25);
+    min-height: rem(210);
+    padding: rem(24) rem(34) rem(0);
     background-color: $white;
-    border-radius: rem(16);
+    border-radius: rem(3);
+    position: relative;
+}
+
+.company-card::before{
+    background-image: url('../images/common/company-roof.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(-82);
+    right: calc(50% - min(50%, rem(800)));
+    width: 100%;
+    height: rem(80);
+    z-index: 1;
 }
 
 .company-card__wrapper {
@@ -22,31 +37,25 @@
 .company-card__list{
     text-align: left;
     display: flex;
-    font-size: rem(16);
+    font-size: rem(18);
+    font-weight: $regular;
     padding-bottom: rem(5);
 }
 
-.company-card__list + .company-card__list {
-    margin-top: rem(10);
-}
 
 .company-card__list dt {
-    font-weight: $regular;
-    width: 20%;
+    width: 23%;
     display: flex;
     margin-top: rem(-1);
-    color: $green;
 }
 
 .company-card__list dd {
-    width: 77%;
+    width: 80%;
     box-sizing: border-box;
     overflow-wrap: break-word;
     word-wrap: break-word;
     white-space: normal;
     display: flex;
-    color: $black;
-    font-weight: $medium;
     line-height: 1.3;
 }
 
@@ -80,20 +89,4 @@
     margin-top: rem(10);
     margin-left: auto;
     align-items: top;
-}
-
-.company-card__text {
-    color: $green;
-    font-size: rem(16);
-    font-weight: $medium;
-    letter-spacing: 0.01em;
-    @include mq(md) {
-        font-size: rem(16);
-    }
-}
-
-.company-card__bottom img {
-    width: rem(28);
-    height: rem(28);
-    margin-left: rem(6);
 }

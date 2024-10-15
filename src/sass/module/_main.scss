@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.main{
+    padding: 0 rem(10);
+    @include mq(md) {
+        padding: 0 rem(20);
+    }
+}

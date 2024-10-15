@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.company-cards{
+    @include mq(md){
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.company-cards__list{
+    position: relative;
+    @include mq(md){
+        max-width: calc(33.3333% - 0.625rem * 2 / 3 );
+        width: 100%;
+    }
+}
+
+.company__buttons{
+    position: absolute;
+    bottom: -15%;
+    left: 50%; /* 左右中央に配置 */
+    transform: translateX(-50%); /* 水平中央にするための調整 */
+}
+
+.company-cards__list + .company-cards__list{
+    margin-top: 8.25rem;
+    @include mq(md){
+        margin-top: 0;
+        margin-left: rem(10);
+    }
+}
+
+
+
+
+/* 枚数が増えたときのための処理 */
+.company-cards__list:nth-child(3n + 1){
+    @include mq(md){
+        margin-left: 0;
+    }
+}
+
+/* 枚数が増えたときのための処理 */
+.company-cards__list:nth-child(n + 4){
+    @include mq(md){
+        margin-top: 8.25rem;
+    }
+}
