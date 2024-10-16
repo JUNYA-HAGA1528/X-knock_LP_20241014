@@ -10,6 +10,15 @@
     }
 }
 
+.section-title__text--choice{
+    color: $green;
+    font-size: rem(32);
+    font-weight: $bold;
+    @include mq(md) {
+        font-size: rem(40);
+    }
+}
+
 
 .section-title__text + .section-title__text{
     @include mq(md) {
@@ -36,6 +45,13 @@
     font-size: rem(36);
     @include mq(md) {
         font-size: rem(48);
+    }
+}
+
+.section-title-font--choice{
+    font-size: rem(28);
+    @include mq(md) {
+        font-size: rem(36);
     }
 }
 

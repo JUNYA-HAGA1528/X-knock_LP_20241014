@@ -5,7 +5,7 @@
 }
 
 .button__text{
-    color: #AFBC34;
+    color: $lightgreen;
     font-size: rem(20.78);
     font-weight: $regular;
     letter-spacing: 0.04em;
@@ -16,7 +16,7 @@
 
 .button__text-font{
     color: $green;
-    font-weight: $medium;
+    font-weight: $bold;
     font-size: rem(15.11);
     line-height: calc(37.8/15.11);
     @media screen {
@@ -26,7 +26,7 @@
 }
 
 .button__text-font-big{
-    color: #AFBC34;
+    color: $lightgreen;
     font-size: rem(20);
     font-weight: $bold;
     @include mq(md) {
@@ -113,7 +113,7 @@
 }
 
 .button__item--trust-color {
-    background-color: #AFBC34;
+    background-color: $lightgreen;
     font-size: rem(17);
     width: rem(283);
     height: rem(54);
@@ -174,6 +174,50 @@
 }
 
 .button__item--now span::after {
+	background-image: url(../images/common/button-green.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+    position: absolute;
+    top: 50%;
+    right: rem(-2);
+    width: rem(65);
+	height: rem(65);
+	transform: translateY(-50%);
+	transition: 0.4s background-color;
+    @include mq(md) {
+        right: rem(-2);
+        width: rem(78);
+        height: rem(78);
+    }
+}
+
+
+
+
+
+
+
+//trends
+.button__item--trends  {
+    font-size: rem(20);
+    width: rem(340);
+    height: rem(51);
+    border-radius: rem(50);
+    z-index: 1;
+    transition: 0.4s;
+    letter-spacing: 0.01em;
+    overflow: hidden;
+    text-decoration: none;
+    @include mq(md) {
+        font-size: rem(22.8);
+        width: rem(480);
+        height: rem(73);    
+    }
+}
+
+.button__item--trends span::after {
 	background-image: url(../images/common/button-green.svg);
 	background-position: center;
 	background-repeat: no-repeat;

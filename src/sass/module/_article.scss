@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.article{
+    text-align: center;
+    background-color: #F5F3E4;
+    display: flex;
+    justify-content: center;
+    max-width: $max-width;
+    margin: auto;
+    @include mq(md) {
+        max-width: rem(1440);
+    }
+}
+
+.article__container{
+    width: 100%;
+    @include mq(md){
+        width: 86.34%;
+        max-width: rem(1057);
+    }
+}
+
+.article__case{
+    margin-top: rem(80);
+    @include mq(md) {
+        margin-top: rem(120);
+    }
+}
+
+
+
+
+
+
+.article__aside{
+    width: 26.56%;
+    background-color: #FEFEFE;
+}

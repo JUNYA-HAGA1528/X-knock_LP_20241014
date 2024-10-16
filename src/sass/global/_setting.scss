@@ -34,12 +34,13 @@ $bold: 700;
 $black: #333;
 $white: #fff;
 $green: #006837;
+$lightgreen: #AFBC34;
 $orange: #F5A210;
 
 
 body {
     font-family: $base-font-family;
-    background-color: #AFBC34;
+    background-color: $lightgreen;
     color: $black;
 }
 

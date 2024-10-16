@@ -26,7 +26,7 @@
 }
 
 .trust-card__review{
-    color: #AFBC34;
+    color: $lightgreen;
     font-size: rem(30.22);
     font-weight: $regular;
     @include mq(md) {
@@ -46,7 +46,7 @@
 .trust-card__companyName{
     margin-top: rem(6);
     padding: rem(7.5) 0;
-    background-color: #AFBC34;
+    background-color: $lightgreen;
     color: $white;
     font-size: rem(30.22);
     font-weight: $bold;

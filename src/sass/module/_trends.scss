@@ -1,0 +1,169 @@
+@use "global" as *;
+
+.trends{
+    padding: rem(66) 0 rem(80);
+    @include mq(md) {
+        padding: rem(109) 0 rem(80);
+    }
+}
+
+.trends__area{
+    width: 92%;
+    margin: 0 auto;
+    @include mq(md) {
+        width: 92.44%;
+    }
+}
+
+.trends__area img {
+    aspect-ratio: 340/954;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include mq(md) {
+        aspect-ratio: 977/962;
+    }
+}
+
+.trends__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(15);
+    @include mq(md) {
+        max-width: rem(752);
+        padding: 0 rem(20);
+    }
+}
+
+.trends__list{
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(51);
+    }
+}
+
+.trends__item + .trends__item{
+    margin-top: rem(40);
+}
+
+.trends__source{
+    color: #222222;
+    margin-top: rem(9);
+    display: flex;
+    justify-content: center;
+    font-size: rem(10.85);
+    font-weight: $regular;
+    @include mq(md) {
+        margin-top: rem(21);
+        font-size: rem(12);
+    }
+}
+
+.trends__source-text{
+    text-decoration: underline;
+}
+
+.trends__source-text a:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+
+
+
+
+
+//ボタン
+.trends__button{
+    margin-top: rem(20);
+}
+
+.trends__button-box{
+    color: $lightgreen;
+    font-size: rem(20.78);
+    font-weight: $regular;
+    letter-spacing: 0.04em;
+    @include mq(md) {
+        font-size: rem(22);
+    }
+}
+
+.trends__button-text{
+    font-size: rem(19.74);
+    font-weight: $regular;
+    @include mq(md) {
+        font-size: rem(27.87);
+    }
+}
+
+.trends__button-text-font{
+    color: $lightgreen;
+    font-weight: $bold;
+    font-size: rem(15.11);
+    line-height: calc(37.8/15.11);
+    @include mq(md) {
+        font-size: rem(20.27);
+        line-height: calc(40/16);
+    }
+}
+
+.trends__button-text-font-big{
+    color: $green;
+    font-size: rem(16);
+    font-weight: $bold;
+    @include mq(md) {
+        font-size: rem(24);
+    }
+}
+
+
+.trends__button-item  {
+    background: $lightgreen;
+    position: relative;
+    color: $white;
+    font-size: rem(15);
+    font-weight: $bold;
+    padding-right: rem(22);
+    letter-spacing: 0.04em;
+    width: rem(340);
+    height: rem(51.75);
+    border-radius: rem(50);
+    z-index: 1;
+    transition: 0.4s;
+    letter-spacing: 0.01em;
+    overflow: hidden;
+    @include mq(md) {
+        font-size: rem(22.8);
+        font-weight: $bold;
+        padding-right: rem(22);
+        letter-spacing: 0.04em;
+        width: rem(480);
+        height: rem(73);    
+    }
+}
+
+.trends__button-item span::after {
+	background-image: url(../images/common/button-lowgreen.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+    position: absolute;
+    top: 50%;
+    right: rem(-2);
+    width: rem(55);
+	height: rem(55);
+	transform: translateY(-50%);
+	transition: 0.4s background-color;
+    @include mq(md) {
+        right: rem(-2);
+        width: rem(80);
+        height: rem(80);
+    }
+}
+
+.trends__button-item:hover{
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    cursor: pointer;
+}

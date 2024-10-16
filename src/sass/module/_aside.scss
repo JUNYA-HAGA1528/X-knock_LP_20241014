@@ -1,0 +1,16 @@
+@use "global" as *;
+
+
+.aside__img {
+    cursor: pointer;
+    max-width: 342px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .aside__img img {
+    height: auto;
+    transition: transform .6s ease; /* ゆっくり変化させる */
+  }
+  .aside__img:hover img {
+    transform: scale(1.05); /* 拡大 */
+  }
