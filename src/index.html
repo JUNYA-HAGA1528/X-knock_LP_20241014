@@ -37,45 +37,91 @@
 
 
 <body>
-<main class="main">
 
-    
+    <!----------------------------------
+    ナビ
+    ---------------------------------->
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="">
+                    <img src="./assets/images/common/fv-logo.svg" alt="ISHIKAWA" loading="lazy">
+                </a>
+            </div>
+            <nav class="header__nav header-nav u-desktop">
+                <ul class="header-nav__list">
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" target="_blank" href="https://ishikawa-realestate-guide.com/category/area/">
+                            <div class="header-nav__textBox">
+                                <p class="header-nav__text-jp">石川エリア</p>
+                                <p class="header-nav__text-en">AREA</p>
+                            </div>
+                            <img class="header-nav__icon" src="./assets/images/common/nav-icon.svg" alt="" loading="lazy">
+                        </a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" target="_blank" href="https://ishikawa-realestate-guide.com/category/column/">
+                            <div class="header-nav__textBox">
+                                <p class="header-nav__text-jp">不動産売却の手引き</p>
+                                <p class="header-nav__text-en">COLUMN</p>
+                            </div>
+                            <img class="header-nav__icon" src="./assets/images/common/nav-icon.svg" alt="" loading="lazy">
+                        </a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" target="_blank" href="https://ishikawa-realestate-guide.com/category/company/">
+                            <div class="header-nav__textBox">
+                                <p class="header-nav__text-jp">不動産会社一覧</p>
+                                <p class="header-nav__text-en">COMPANY&nbsp;LIST</p>
+                            </div>
+                            <img class="header-nav__icon" src="./assets/images/common/nav-icon.svg" alt="" loading="lazy">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+<main class="main">
     <!----------------------------------
     石川県で不動産売却に対応している不動産会社一覧
     ---------------------------------->
     <div class="fv">
         <div class="fv__head">
             <h1 class="fv-logo">
-                <img src="./assets/images/common/fv-logo.svg" alt="ISHIKAWA" loading="lazy">
+                <a href="">
+                    <img src="./assets/images/common/fv-logo.svg" alt="ISHIKAWA" loading="lazy">
+                </a>
             </h1>
             <div class="fv__inner">
-                <nav class="fv__nav nav">
-                    <ul class="nav__list">
-                        <li class="nav__item u-desktop">
-                            <a class="nav__link" target="_blank" href="https://ishikawa-realestate-guide.com/category/area/">
-                                <div class="nav__textBox">
-                                    <p class="nav__text-jp">石川エリア</p>
-                                    <p class="nav__text-en">AREA</p>
+                <nav class="fv__nav fv-nav">
+                    <ul class="fv-nav__list">
+                        <li class="fv-nav__item u-desktop">
+                            <a class="fv-nav__link" target="_blank" href="https://ishikawa-realestate-guide.com/category/area/">
+                                <div class="fv-nav__textBox">
+                                    <p class="fv-nav__text-jp">石川エリア</p>
+                                    <p class="fv-nav__text-en">AREA</p>
                                 </div>
-                                <img class="nav__icon" src="./assets/images/common/nav-icon.svg" alt="" loading="lazy">
+                                <img class="fv-nav__icon" src="./assets/images/common/nav-icon.svg" alt="" loading="lazy">
                             </a>
                         </li>
-                        <li class="nav__item u-desktop">
-                            <a class="nav__link" target="_blank" href="https://ishikawa-realestate-guide.com/category/column/">
-                                <div class="nav__textBox">
-                                    <p class="nav__text-jp">不動産売却の手引き</p>
-                                    <p class="nav__text-en">COLUMN</p>
+                        <li class="fv-nav__item u-desktop">
+                            <a class="fv-nav__link" target="_blank" href="https://ishikawa-realestate-guide.com/category/column/">
+                                <div class="fv-nav__textBox">
+                                    <p class="fv-nav__text-jp">不動産売却の手引き</p>
+                                    <p class="fv-nav__text-en">COLUMN</p>
                                 </div>
-                                <img class="nav__icon" src="./assets/images/common/nav-icon.svg" alt="" loading="lazy">
+                                <img class="fv-nav__icon" src="./assets/images/common/nav-icon.svg" alt="" loading="lazy">
                             </a>
                         </li>
-                        <li class="nav__item u-desktop">
-                            <a class="nav__link" target="_blank" href="https://ishikawa-realestate-guide.com/category/company/">
-                                <div class="nav__textBox">
-                                    <p class="nav__text-jp">不動産会社一覧</p>
-                                    <p class="nav__text-en">COMPANY&nbsp;LIST</p>
+                        <li class="fv-nav__item u-desktop">
+                            <a class="fv-nav__link" target="_blank" href="https://ishikawa-realestate-guide.com/category/company/">
+                                <div class="fv-nav__textBox">
+                                    <p class="fv-nav__text-jp">不動産会社一覧</p>
+                                    <p class="fv-nav__text-en">COMPANY&nbsp;LIST</p>
                                 </div>
-                                <img class="nav__icon" src="./assets/images/common/nav-icon.svg" alt="" loading="lazy">
+                                <img class="fv-nav__icon" src="./assets/images/common/nav-icon.svg" alt="" loading="lazy">
                             </a>
                         </li>
                     </ul>
@@ -125,13 +171,21 @@
             </div>
         </div>
         <div class="fv__point">
-            <figure class="fv__point-img">
-                <img src="./assets/images/common/fv-point.png" alt="男女の写真" loading="lazy">
-            </figure>
-            <div class="fv__point-wrapper">
-                <img class="fv__point-line" src="./assets/images/common/" alt="" loading="lazy">
-                <div class="fv__point-sentence">
-                    <p class="fv__point-text"></p>
+            <div class="fv__point-inner">
+                <div class="fv__point-flex">
+                    <figure class="fv__point-img">
+                        <img src="./assets/images/common/fv-point.png" alt="男女の写真" loading="lazy">
+                    </figure>
+                    <div class="fv__point-wrapper">
+                        <img class="fv__point-line" src="./assets/images/common/fv-point-line.png" alt="" loading="lazy">
+                        <div class="fv__point-sentence">
+                            <p class="fv__point-text">
+                                石川県で不動産売却を成功させるには、<span class="fv__point-text-orange">地域での実績</span>と<span class="fv__point-text-orange">評判がある不動産会社に依頼</span>することが重要なポイントとなります。<br>
+                                信頼できる不動産会社を選ぶことで売却がスムーズに進むだけでなく、満足のいく結果が得られる可能性も高まります。<br>
+                                今回は、石川県内で当メディアが特におすすめする3社をご紹介します!
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -202,7 +256,7 @@
                             <!-- ボタン -->
                             <div class="trust-card__buttons button">
                                 <div class="button__box">
-                                    <p class="button__text">\ <span>カンタン無料見積もり</span> /</p>
+                                    <p class="button__text">\ <span class="button__text-font">カンタン無料見積もり</span> /</p>
                                     <a href="" target="_blank">
                                         <button class="button__item button__item--trust-color">
                                             <span>依頼はこちらから</span>
@@ -210,7 +264,7 @@
                                     </a>
                                 </div>
                                 <div class="button__box">
-                                    <p class="button__text">\ <span>会社の評判・口コミ</span> /</p>
+                                    <p class="button__text">\ <span class="button__text-font">会社の評判・口コミ</span> /</p>
                                     <a href="" target="_blank">
                                         <button class="button__item button__item--trust">
                                             <span>会社比較はこちらから</span>
@@ -267,7 +321,7 @@
                             <!-- ボタン -->
                             <div class="trust-card__buttons button">
                                 <div class="button__box">
-                                    <p class="button__text">\ <span>カンタン無料見積もり</span> /</p>
+                                    <p class="button__text">\ <span class="button__text-font">カンタン無料見積もり</span> /</p>
                                     <a href="" target="_blank">
                                         <button class="button__item button__item--trust-color">
                                             <span>依頼はこちらから</span>
@@ -275,7 +329,7 @@
                                     </a>
                                 </div>
                                 <div class="button__box">
-                                    <p class="button__text">\ <span>会社の評判・口コミ</span> /</p>
+                                    <p class="button__text">\ <span class="button__text-font">会社の評判・口コミ</span> /</p>
                                     <a href="" target="_blank">
                                         <button class="button__item button__item--trust">
                                             <span>会社比較はこちらから</span>
@@ -333,7 +387,7 @@
                             <!-- ボタン -->
                             <div class="trust-card__buttons button">
                                 <div class="button__box">
-                                    <p class="button__text">\ <span>カンタン無料見積もり</span> /</p>
+                                    <p class="button__text">\ <span class="button__text-font">カンタン無料見積もり</span> /</p>
                                     <a href="" target="_blank">
                                         <button class="button__item button__item--trust-color">
                                             <span>依頼はこちらから</span>
@@ -341,7 +395,7 @@
                                     </a>
                                 </div>
                                 <div class="button__box">
-                                    <p class="button__text">\ <span>会社の評判・口コミ</span> /</p>
+                                    <p class="button__text">\ <span class="button__text-font">会社の評判・口コミ</span> /</p>
                                     <a href="" target="_blank">
                                         <button class="button__item button__item--trust">
                                             <span>会社比較はこちらから</span>
@@ -389,9 +443,45 @@
                         <p class="now__text">今後さらに金利が上昇した場合、不動産価格の下落からは逃れられません。そのため、石川県で不動産売却を検討している方は、すぐにでも売却することをおすすめします。</p>
                     </div>
                 </div>
+                <div class="now__buttons button">
+                    <div class="button__box">
+                        <p class="button__text">\ <span class="button__text-font-big">石川県</span><span class="button__text-font">でおすすめの</span> /</p>
+                        <a href="" target="_blank">
+                            <button class="button__item button__item--now">
+                                <span>不動産会社をみる</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>  
+
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

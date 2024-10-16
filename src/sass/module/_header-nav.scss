@@ -1,0 +1,50 @@
+@use "global" as *;
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header-nav__list{
+    display: flex;
+    justify-content: flex-end;
+    gap: rem(40);
+    background-color: #AFBC34;
+    padding: rem(12) rem(130);
+    border-radius: 0 0 0 rem(20);
+}
+
+
+.header-nav__textBox{
+    text-align: center;
+}
+
+.header-nav__text-jp{
+    color: $white;
+    font-size: rem(20);
+    font-weight: $bold;
+}
+
+.header-nav__text-en{
+    color: #F5EC10;
+    font-size: rem(16);
+    font-weight: $medium;
+}
+
+.header-nav__link{
+    display: flex;
+    gap: rem(10);
+}
+
+.header-nav__icon{
+    margin-top: rem(5);
+    width: rem(21);
+    height: rem(21);
+}

@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.header {
+    background-color: transparent;
+    position: fixed;
+    height: 75px; /* 初期のヘッダー高さを指定 */
+    width: 100%;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.header.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+.header.scrolled {
+    height: 60px; /* スクロール時のヘッダー高さ */
+    transition: height 0.3s ease; /* スムーズな高さ変更 */
+    @include mq(md) {
+        height: 75px; /* スクロール時のヘッダー高さ */
+    }
+}
+
+.header__inner{
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: rem(25);
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s ease; /* 背景色が滑らかに変わる */
+}
+
+.header.scrolled .header__inner {
+    height: 100%; /* ヘッダーの高さに合わせる */
+}
+
+
+.header__logo{
+    width: rem(135);
+    height: rem(34);
+    position: relative;
+    z-index: 9999;
+    @include mq(md) {
+        width: rem(259);
+        height: rem(65);
+    }
+}

@@ -3,7 +3,6 @@
 .fv{
     background-color: $white;
     border-radius: rem(20) rem(20) 0 0;
-    padding: 0 0 rem(100) ;
 }
 
 .fv__head{
@@ -201,3 +200,74 @@ mark {
 
 
 
+
+
+.fv__point{
+    margin-top: rem(60);
+    @include mq(md) {
+        margin-top: rem(85);
+    }
+}
+
+.fv__point-inner{
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 rem(15);
+    @include mq(md) {
+        max-width: rem(1220);
+        padding: 0 rem(20);
+    }
+}
+
+.fv__point-flex{
+    display: flex;
+    @media screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+    }
+}
+
+.fv__point-img{
+    margin-top: rem(21);
+    width: 100%;
+    @include mq(md) {
+        margin-top: rem(0);
+        width: 43.55%;
+    }
+}
+
+.fv__point-wrapper{
+    width: 100%;
+    @include mq(md) {
+        width: 56.86%;
+    }
+}
+
+.fv__point-line{
+    width: rem(300);
+    height: rem(7.3);
+    margin: 0 auto;
+    @include mq(md) {
+        margin: 0;
+    }
+}
+
+.fv__point-sentence{
+    margin-top: rem(40.7);
+    @include mq(md) {
+        margin-top: rem(20.7);
+    }
+}
+
+.fv__point-text{
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    @include mq(md) {
+        font-size: rem(20);
+    }
+}
+
+.fv__point-text-orange{
+    color: $orange;
+}

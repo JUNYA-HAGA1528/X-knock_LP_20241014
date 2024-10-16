@@ -14,7 +14,7 @@
     }
 }
 
-.button__text span {
+.button__text-font{
     color: $green;
     font-weight: $medium;
     font-size: rem(15.11);
@@ -25,7 +25,14 @@
     }
 }
 
-
+.button__text-font-big{
+    color: #AFBC34;
+    font-size: rem(20);
+    font-weight: $bold;
+    @include mq(md) {
+        font-size: rem(24);
+    }
+}
 
 
 .button__item  {
@@ -140,5 +147,48 @@
         right: rem(-2);
         width: rem(60);
         height: rem(60);
+    }
+}
+
+
+
+
+
+
+//now
+.button__item--now  {
+    font-size: rem(20);
+    width: rem(320);
+    height: rem(61);
+    border-radius: rem(50);
+    z-index: 1;
+    transition: 0.4s;
+    letter-spacing: 0.01em;
+    overflow: hidden;
+    text-decoration: none;
+    @include mq(md) {
+        font-size: rem(22.8);
+        width: rem(380);
+        height: rem(73);    
+    }
+}
+
+.button__item--now span::after {
+	background-image: url(../images/common/button-green.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+    position: absolute;
+    top: 50%;
+    right: rem(-2);
+    width: rem(65);
+	height: rem(65);
+	transform: translateY(-50%);
+	transition: 0.4s background-color;
+    @include mq(md) {
+        right: rem(-2);
+        width: rem(78);
+        height: rem(78);
     }
 }
