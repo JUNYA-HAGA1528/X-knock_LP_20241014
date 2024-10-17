@@ -14,6 +14,18 @@
     }
 }
 
+.button__text--color{
+    color: $green;
+    @include mq(md) {
+        font-size: rem(27.87);
+    }
+}
+
+.button__text--weight{
+    font-weight: $regular;
+    color: $white;
+}
+
 .button__text-font{
     color: $green;
     font-weight: $bold;
@@ -23,6 +35,11 @@
         font-size: rem(16);
         line-height: calc(40/16);
     }
+}
+
+.button__text-font--white{
+    color: $white;
+    font-weight: $medium;
 }
 
 .button__text-font-big{
@@ -218,6 +235,52 @@
 }
 
 .button__item--trends span::after {
+	background-image: url(../images/common/button-green.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+    position: absolute;
+    top: 50%;
+    right: rem(-2);
+    width: rem(65);
+	height: rem(65);
+	transform: translateY(-50%);
+	transition: 0.4s background-color;
+    @include mq(md) {
+        right: rem(-2);
+        width: rem(78);
+        height: rem(78);
+    }
+}
+
+
+
+
+
+
+
+
+
+//"strong
+.button__item--strong  {
+    font-size: rem(20);
+    width: rem(320);
+    height: rem(61);
+    border-radius: rem(50);
+    z-index: 1;
+    transition: 0.4s;
+    letter-spacing: 0.01em;
+    overflow: hidden;
+    text-decoration: none;
+    @include mq(md) {
+        font-size: rem(22.8);
+        width: rem(380);
+        height: rem(73);    
+    }
+}
+
+.button__item--strong span::after {
 	background-image: url(../images/common/button-green.svg);
 	background-position: center;
 	background-repeat: no-repeat;

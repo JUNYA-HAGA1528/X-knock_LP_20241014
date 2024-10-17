@@ -15,8 +15,7 @@
 .article__container{
     width: 100%;
     @include mq(md){
-        width: 86.34%;
-        max-width: rem(1057);
+        width: 75.5%;
     }
 }
 
@@ -27,12 +26,7 @@
     }
 }
 
-
-
-
-
-
 .article__aside{
-    width: 26.56%;
+    width: 24.5%;
     background-color: #FEFEFE;
 }

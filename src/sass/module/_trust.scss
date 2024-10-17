@@ -48,6 +48,10 @@
     }
 }
 
+.trust__title-top-orange{
+    color: $orange;
+}
+
 .trust__title-top::before,
 .trust__title-top::after {
     content: "";
