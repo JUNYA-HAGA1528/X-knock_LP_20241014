@@ -16,6 +16,7 @@
 }
 
 .guidance__subtitle{
+    text-align: left;
     margin-top: rem(40);
     color: $white;
     font-size: rem(16);
@@ -23,6 +24,7 @@
     line-height: calc(28/16);
     letter-spacing: 0.01em;
     @include mq(md) {
+        text-align: center;
         margin-top: rem(60);
         font-size: rem(20);
         line-height: calc(32/20);
@@ -33,14 +35,123 @@
 
 
 
+//guidance__first
+.guidance__first{
+    position: relative;
+    background-image: url('../images/common/guidance-first-bg-sp.png');
+    background-position: calc(50% - 15px) center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: left;
+    margin-top: rem(40);
+    padding: rem(20) 0 rem(59.05);
+    @include mq(md) {
+        background-image: url('../images/common/guidance-first-bg.png');
+        background-position: calc(50% - 50%) center;
+        background-repeat: no-repeat;
+        background-size: 93.5% 100%;    
+        padding: rem(40) 0 rem(81);
+    }
+}
+
+.guidance-head__first-man{
+    position: absolute;
+    top: -45px;
+    right: 6%;    
+    width: rem(110);
+    height: rem(165);
+    @include mq(md) {
+        top: auto;
+        bottom: 0px;
+        right: 6%;    
+        width: rem(222);
+        height: rem(350);
+    }
+}
 
 .guidance__first-inner{
     max-width: $max-width;
     margin: auto;
     padding: 0 rem(15);
     @include mq(md) {
-        max-width: 887px;
+        max-width: rem(825);
         padding: 0 rem(20);
+    }
+}
+
+
+
+
+.guidance__first-heading{
+    @include mq(md) {
+        margin-left: rem(-40);
+    }
+}
+
+
+
+
+
+.guidance__first-list{
+    margin-top: rem(71);
+    @include mq(md){
+        margin-top: rem(66);
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.guidance__first-item {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    @include mq(md){
+        max-width: calc(25% - 2.1875rem * 3 / 4 );
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.guidance__first-number{
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: rem(63);
+    height: rem(126);
+    @include mq(md) {
+        left: -11.5%;
+        width: rem(118);
+        height: rem(63);
+    }
+}
+
+.guidance__first-item + .guidance__first-item{
+    margin-top: rem(50);
+    @include mq(md){
+        margin-top: 0;
+        margin-left: rem(35);
+    }
+}
+
+/* 枚数が増えたときのための処理 */
+.guidance__first-item:nth-child(4n + 1){
+    @include mq(md){
+        margin-left: 0;
+    }
+}
+
+/* 枚数が増えたときのための処理 */
+.guidance__first-item:nth-child(n + 5){
+    @include mq(md){
+        margin-top: 3.125rem;
+    }
+}
+
+.guidance__first-frame{
+    width: 58%;
+    margin: 0 auto;
+    @include mq(md) {
+        width: 100%;
     }
 }
 
@@ -67,18 +178,24 @@
 
 
 
+
+//guidance__explanation
 .guidance__explanation{
-    background-image: url('../images/common/explanation-bg.jpg');
+    background-image: url('../images/common/explanation-bg-sp.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: left;
+    margin-top: rem(80);
+    @include mq(md) {
+        background-image: url('../images/common/explanation-bg.jpg');
+        margin-top: rem(83);
+    }
 }
 
 .guidance__explanation-inner{
     max-width: $max-width;
     margin: auto;
-    padding: 0 rem(15);
     @include mq(md) {
         max-width: rem(883);
         padding: 0 rem(20);
@@ -86,17 +203,22 @@
 }
 
 .guidance__explanation-wrapper{
-    padding: rem(32) rem(29) rem(61);
+    padding: rem(32) rem(15) rem(61);
     background: rgba(255, 255, 255, 0.7);
+    @include mq(md) {
+        padding: rem(32) rem(29) rem(61);
+    }
 }
 
 .guidance__explanation-title{
+    text-align: center;
     color: #444444;
     font-size: rem(28);
     font-weight: $medium;
     letter-spacing: 0.02em;
     padding: rem(20) 0;
     @include mq(md) {
+        text-align: left;
         font-size: rem(32);
         letter-spacing: 0.018em;
         padding-left: rem(23);
@@ -109,7 +231,15 @@
     display: inline-block;
     font-size: rem(24);
     border-radius: rem(6);
-    padding: rem(2.5) rem(39);
+    padding: rem(2.5) rem(26);
+    @include mq(md) {
+        padding: rem(2.5) rem(39);
+        font-size: rem(32);
+    }
+}
+
+.guidance__explanation-title-font{
+    font-size: rem(24);
     @include mq(md) {
         font-size: rem(32);
     }
@@ -137,7 +267,72 @@
     font-weight: $medium;
     line-height: calc(26/16);
     letter-spacing: 0.018em;
+    padding: 0 rem(18);
     @include mq(md) {
+        padding: 0;
         line-height: calc(30/16);
+    }
+}
+
+
+
+
+
+
+
+.guidance__second{
+    position: relative;
+    background-image: url('../images/common/guidance-second-bg-sp.png');
+    background-position: calc(50% + 15px) center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: left;
+    margin-top: rem(81);
+    padding: rem(20) 0 rem(59.05);
+    @include mq(md) {
+        background-image: url('../images/common/guidance-second-bg.png');
+        background-position: calc(50% + 50%) center;
+        background-repeat: no-repeat;
+        background-size: 93.5% 100%; 
+        margin-top: rem(37);   
+        padding: rem(40) 0 rem(81);
+    }
+}
+
+.guidance__second-inner{
+    max-width: rem(890);
+    width: 100%;
+    padding: 0 rem(15) 0 rem(25);
+    margin-left: auto;
+    @include mq(md) {
+        padding: 0 rem(20) ;
+    }
+}
+
+.guidance__second-heading--right{
+    margin-left: auto;
+    width: rem(291);
+    @include mq(md) {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.guidance-head__container {
+    overflow-x: scroll;
+    width: calc(100% + rem(25));  // 右側のパディングのみ補正
+    margin: rem(38) auto auto 0; // 左側のパディングはそのまま
+    @include mq(md) {
+        width: 100%;
+        margin: rem(40) auto auto auto;
+    }
+}
+
+.guidance-head__table {
+    width: rem(830);
+    height: rem(367);
+    @include mq(md) {
+        width: 100%;
+        height: 100%;
     }
 }

@@ -1,0 +1,87 @@
+
+@use "global" as *;
+
+
+
+.guidance-head__number{
+    width: rem(103);
+    height: rem(93);
+}
+
+.guidance-head__number--right{
+    margin-left: auto;
+    @include mq(md) {
+        margin-left: 0;
+    }
+}
+
+.guidance-head__first-head {
+    margin-top: rem(20);
+    line-height: 1;
+    @include mq(md) {
+        display: flex;
+        align-items: center; /* 子要素を上下中央に揃える */
+        margin-top: rem(23);
+        margin-left: rem(30);
+    }
+}
+
+
+.guidance-head__first-head-box{
+    display: flex;
+}
+
+.guidance-head__first-title{
+    color: #7C9B8C;
+    font-size: rem(24);
+    font-weight: $semiBold;
+    padding-right: rem(13);
+    border-right: solid 1px #828282;
+    @include mq(md) {
+        font-size: rem(32);
+        padding-right: rem(20);
+    }
+}
+
+.guidance-head__first-title--second{
+    color: $lightgreen;
+    padding-left: rem(13);
+    padding-right: rem(12);
+    border-right: none;
+    @include mq(md) {
+        padding-left: rem(20);
+        padding-right:rem(40);
+    }
+}
+
+.guidance-head__first-border {
+    align-self: center; /* 親要素内で上下中央に配置 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(291);
+    border-top: solid 1.5px $lightgreen;
+    margin-top: rem(20);
+    @include mq(md) {
+        width: rem(253);
+        border-top: solid 2.04px $lightgreen;
+        margin-top: rem(0);
+    }
+}
+
+
+
+.guidance-head__first-subtitle{
+    text-align: left;
+    margin-top: rem(40);
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(26/16);
+    letter-spacing: 0.018em;
+    @include mq(md) {
+        margin-top: rem(19);
+        margin-left: rem(30);
+        font-size: rem(18);
+        line-height: 1.45;
+    }
+}
