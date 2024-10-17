@@ -1,0 +1,143 @@
+@use "global" as *;
+
+.guidance{
+    background-color: $green;
+    padding: rem(80) 0 rem(60) ;
+}
+
+.guidance__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(15);
+    @include mq(md) {
+        max-width: rem(825);
+        padding: 0 rem(20);
+    }
+}
+
+.guidance__subtitle{
+    margin-top: rem(40);
+    color: $white;
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(28/16);
+    letter-spacing: 0.01em;
+    @include mq(md) {
+        margin-top: rem(60);
+        font-size: rem(20);
+        line-height: calc(32/20);
+    }
+}
+
+
+
+
+
+
+.guidance__first-inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(15);
+    @include mq(md) {
+        max-width: 887px;
+        padding: 0 rem(20);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.guidance__explanation{
+    background-image: url('../images/common/explanation-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+}
+
+.guidance__explanation-inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(15);
+    @include mq(md) {
+        max-width: rem(883);
+        padding: 0 rem(20);
+    }
+}
+
+.guidance__explanation-wrapper{
+    padding: rem(32) rem(29) rem(61);
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.guidance__explanation-title{
+    color: #444444;
+    font-size: rem(28);
+    font-weight: $medium;
+    letter-spacing: 0.02em;
+    padding: rem(20) 0;
+    @include mq(md) {
+        font-size: rem(32);
+        letter-spacing: 0.018em;
+        padding-left: rem(23);
+    }
+}
+
+.guidance__explanation-title-green{
+    background-color: $green;
+    color: $white;
+    display: inline-block;
+    font-size: rem(24);
+    border-radius: rem(6);
+    padding: rem(2.5) rem(39);
+    @include mq(md) {
+        font-size: rem(32);
+    }
+}
+
+.guidance__explanation-head img {
+    width: rem(327);
+    height: rem(7.3);
+    margin: 0 auto;
+    @include mq(md) {
+        width: rem(785);
+    }    
+}
+
+.guidance__explanation-sentence{
+    margin-top: rem(43);
+    @include mq(md) {
+        margin-top: rem(45);
+    }
+}
+
+.guidance__explanation-text{
+    color: #444444;
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(26/16);
+    letter-spacing: 0.018em;
+    @include mq(md) {
+        line-height: calc(30/16);
+    }
+}

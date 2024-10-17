@@ -2,6 +2,7 @@
 
 .choice{
     background-color: #FEFEFE;
+    color: #444444;
     padding: rem(60) 0 rem(20);
     @include mq(md) {
         padding: rem(100) 0 rem(110);
@@ -19,6 +20,7 @@
 }
 
 .choice__subtitle{
+    color: #222222;
     margin-top: rem(43);
     font-size: rem(16);
     font-weight: $bold;
@@ -33,7 +35,113 @@
 
 .choice__list{
     margin-top: rem(40);
+    text-align: left;
     @include mq(md) {
         margin-top: rem(54);
+    }
+}
+
+.choice__item + .choice__item{
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(50);
+    }
+}
+
+.choice__number {
+    width: rem(340);
+    height: rem(102);
+    @include mq(md) {
+        width: rem(514);
+        height: rem(155);
+    }
+}
+
+.choice__number--reverse{
+    margin-left: auto;
+}
+
+.choice__content{
+    display: flex;
+    @media screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+    }
+}
+
+.choice__content--reverse {
+    @include mq(md) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+.choice__wrapper{
+    width: 100%;
+    @include mq(md) {
+        width: 55.54%;
+    }
+}
+
+.choice__heading{
+    font-size: rem(24);
+    font-weight: $bold;
+    line-height: calc(39.2/24);
+    white-space: nowrap;
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(0);
+        font-size: rem(32);
+    }
+}
+
+.choice__heading-span{
+    color: $green;
+    font-size: rem(28);
+    @include mq(md) {
+        font-size: rem(36);
+    }
+}
+
+.choice__sentence{
+    margin-top: rem(20);
+    @include mq(md) {
+        margin-top: rem(30);
+        padding-right: rem(18);
+    }
+}
+
+.choice__sentence--reverse{
+    @include mq(md) {
+        padding-right: 0;
+        padding-left: rem(18);
+    }
+}
+
+.choice__text{
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(28/16);
+    @include mq(md) {
+        line-height: 2;
+    }
+}
+
+.choice__text + .choice__text{
+    margin-top: rem(20);
+}
+
+.choice__img{
+    width: 100%;
+    margin-top: rem(20);
+    @include mq(md) {
+        width: 44.07%;
+        margin-top: rem(95);
+    }
+}
+
+.choice__buttons{
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(82);
     }
 }

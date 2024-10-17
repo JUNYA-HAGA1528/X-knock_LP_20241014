@@ -48,11 +48,20 @@
     }
 }
 
-.section-title-font--choice{
+.section-title-font--choice,
+.section-title__text--guidance{
     font-size: rem(28);
     @include mq(md) {
         font-size: rem(36);
     }
+}
+
+.section-title-font-color{
+    color: #FFC705;
+}
+
+.section-title__text--guidance{
+    color: $white;
 }
 
 .section-title__img{
