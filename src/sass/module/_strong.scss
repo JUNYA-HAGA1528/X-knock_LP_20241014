@@ -51,6 +51,7 @@
 .strong__title-box{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0 rem(9.95);
     @include mq(md) {
         gap: 0 rem(21);
@@ -98,6 +99,7 @@
 }
 
 .strong__name-content{
+    margin-top: rem(20);
     @include mq(md) {
         margin-top: rem(-115);
         display: flex;
@@ -116,12 +118,13 @@
 
 .strong__name-review{
     background-color: $white;
-    color:rem(315);
+    color:#222;
+    width: rem(315);
     padding: rem(9) 0;
     font-size: rem(18);
     font-weight: $bold;
     letter-spacing: 0.04em;
-    @media screen {
+    @include mq(md) {
         width: 40.4%;
         font-size: rem(20);
     }
@@ -143,11 +146,18 @@
 
 .strong__name-wrapper img {
     margin-top: rem(2);
+    width: rem(240);
+    margin: 0 auto;
+    @include mq(md) {
+        width: 100%;
+    }
 }
 
 .strong__name-left{
+    margin-top: rem(20);
     width: 100%;
     @include mq(md) {
+        margin-top: rem(0);
         width: 55%;
     }
 }
@@ -234,16 +244,13 @@
     margin-top: rem(20);
 }
 
-.trust-card__buttons{
-    width: 100%;
+.strong__sentence-buttons{
+    margin-top: rem(40);
     @include mq(md) {
-        width: 35.7%;
+        margin-top: rem(0);
     }
 }
 
-
-
-//ボタン
 .strong__sentence-button + .strong__sentence-button{
     margin-top: rem(10);
 }
@@ -317,3 +324,253 @@
     transform: translateY(-5px);
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+//strong__service
+.strong__service{
+    padding: rem(60) 0 rem(80);
+    @include mq(md) {
+        padding: rem(68) 0 rem(80);
+    }
+}
+
+.strong__service-inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(15);
+    @include mq(md) {
+        max-width: rem(825);
+        padding: 0 rem(20);
+    }
+}
+
+.strong__service-list{
+    @include mq(md){
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.strong__service-item{
+    @include mq(md){
+        max-width: calc(50% - 3.0625rem * 1 / 2 );
+        width: 100%;
+    }
+}
+
+.strong__service-item + .strong__service-item{
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: 0;
+        margin-left: rem(49);
+    }
+}
+
+
+
+.strong__service-buttons{
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(60);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 rem(54);
+    }
+}
+
+.strong__service-button + .strong__service-button{
+    margin-top: rem(10);
+    @include mq(md) {
+        margin-top: rem(0);
+    }
+}
+
+.strong__service-button-text{
+    color: $orange;
+    font-size: rem(22);
+    font-weight: $regular;
+    letter-spacing: 0.04em;
+}
+
+.strong__service-button-text--green{
+    color: $green;
+}
+
+.strong__service-button-text span {
+    font-weight: $medium;
+    font-size: rem(16);
+    line-height: calc(40/16);
+}
+
+.strong__service-button-box  {
+    background: $orange;
+    position: relative;
+    color: $white;
+    font-size: rem(18);
+    font-weight: $bold;
+    padding-right: rem(22);
+    letter-spacing: 0.04em;
+    width: rem(300);
+    height: rem(58);
+    border-radius: rem(50);
+    z-index: 1;
+    transition: 0.4s;
+    letter-spacing: 0.01em;
+    overflow: hidden;
+}
+
+.strong__service-button-box--green{
+    background: $green;
+}
+
+.strong__service-button-box span::after {
+	background-image: url(../images/common/button-orange.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+    position: absolute;
+    top: 50%;
+    right: rem(-2);
+    width: rem(60);
+	height: rem(60);
+	transform: translateY(-50%);
+	transition: 0.4s background-color;
+    @include mq(md) {
+        right: rem(-2);
+        width: rem(63);
+        height: rem(63);
+    }
+}
+
+.strong__service-button-box--green span::after {
+	background-image: url(../images/common/button-green.svg);
+}
+
+.strong__service-button-box:hover{
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+
+
+
+
+// strong__achievements
+.strong__achievements{
+    background-color: $green;
+    padding: rem(60) 0 rem(50);
+    @include mq(md) {
+        padding: rem(40) 0;
+    }
+}
+
+.strong__achievements-inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(15);
+    @include mq(md) {
+        max-width: rem(723);
+        padding: 0 rem(20);
+    }
+}
+
+.strong__achievements-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 rem(10) ;
+    @include mq(md) {
+        gap: 0 rem(40);
+    }
+}
+
+.strong__achievements-head-line{
+    width: rem(112);
+    height: rem(7.3);
+    @include mq(md) {
+        width: rem(253);
+    }
+}
+
+.strong__achievements-title{
+    color: $white;
+    font-size: rem(24);
+    font-weight: $bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+.table-container {
+    background-color: #00692d; /* 緑の背景色 */
+    padding: 20px;
+    border-radius: 10px; /* 角を丸める */
+    max-width: 630px; /* 合計幅の調整 */
+    margin: 0 auto; /* 中央揃え */
+  }
+  
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff; /* 白背景 */
+    border-radius: 10px;
+    overflow: hidden; /* 角の部分を隠すためにoverflow */
+  }
+  
+  .custom-table th, .custom-table td {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px dotted #8d734a; /* ドットの線 */
+  }
+  
+  .custom-table thead th {
+    background-color: #b4bb27; /* 黄緑色の背景 */
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: none; /* 下線を削除 */
+  }
+  
+  .custom-table tbody tr:last-child td {
+    border-bottom: none; /* 最後の行のボーダーを削除 */
+  }
+  
+  .custom-table tbody td {
+    color: #8d734a; /* 茶色の文字色 */
+    font-size: 14px;
+  }
+  
+  /* 各列の幅の設定 */
+  .custom-table th:nth-child(1), .custom-table td:nth-child(1) {
+    width: 200px; /* 物件種別の幅 */
+  }
+  
+  .custom-table th:nth-child(2), .custom-table td:nth-child(2) {
+    width: 230px; /* 階数の幅 */
+    border-left: 1px dotted #8d734a; /* 左側の点線 */
+    border-right: 1px dotted #8d734a; /* 右側の点線 */
+  }
+  
+  .custom-table th:nth-child(3), .custom-table td:nth-child(3) {
+    width: 200px; /* 専用面積の幅 */
+  }
+  
