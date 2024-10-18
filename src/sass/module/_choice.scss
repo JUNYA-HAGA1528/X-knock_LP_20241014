@@ -5,7 +5,7 @@
     color: #444444;
     padding: rem(60) 0 rem(20);
     @include mq(md) {
-        padding: rem(100) 0 rem(110);
+        padding: rem(107) 0 rem(112);
     }
 }
 
@@ -21,12 +21,14 @@
 
 .choice__subtitle{
     color: #222222;
-    margin-top: rem(43);
+    margin-top: rem(40);
     font-size: rem(16);
     font-weight: $bold;
     line-height: calc(28/16);
     letter-spacing: 0.01em;
+    text-align: left;
     @include mq(md) {
+        text-align: center;
         margin-top: rem(54);
         font-size: rem(20);
         line-height: calc(32/20);    
@@ -43,9 +45,6 @@
 
 .choice__item + .choice__item{
     margin-top: rem(40);
-    @include mq(md) {
-        margin-top: rem(50);
-    }
 }
 
 .choice__number {
@@ -94,6 +93,12 @@
     }
 }
 
+.choice__heading--margin{
+    @include mq(md) {
+        margin-left: rem(15);
+    }
+}
+
 .choice__heading-span{
     color: $green;
     font-size: rem(28);
@@ -127,7 +132,10 @@
 }
 
 .choice__text + .choice__text{
-    margin-top: rem(20);
+    margin-top: rem(28);
+    @include mq(md) {
+        margin-top: rem(20);
+    }
 }
 
 .choice__img{
@@ -139,9 +147,17 @@
     }
 }
 
+.choice__img img {
+    aspect-ratio: 340/210;
+    object-fit: cover;
+    @include mq(md) {
+        aspect-ratio: 346/214;
+    }
+}
+
 .choice__buttons{
     margin-top: rem(40);
     @include mq(md) {
-        margin-top: rem(82);
+        margin-top: rem(80);
     }
 }

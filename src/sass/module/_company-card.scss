@@ -37,6 +37,7 @@
 .company-card__list{
     text-align: left;
     display: flex;
+    color: #000;
     font-size: rem(18);
     font-weight: $regular;
     padding-bottom: rem(5);
@@ -74,6 +75,10 @@
 
 .company-card__list-margin{
     margin-top: rem(2.5);
+}
+
+.company-card__list-margin a{
+    text-decoration: underline;
 }
 
 .company-card__list-margin a:hover {

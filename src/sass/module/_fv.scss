@@ -51,8 +51,8 @@
     z-index: 1;
     @include mq(md) {
         right: calc(50% - min(50.5%, rem(800)));
-        width: 39%;
-        height: 72.5%;
+        width: 42%;
+        height: 76.5%;
     }
 }
 
@@ -118,6 +118,10 @@
     @include mq(md) {
         font-size: rem(45);
     }
+}
+
+.fv__sub-title mark {
+    color: #333;
 }
 
 .fv__sub-title-font{
@@ -208,7 +212,7 @@ mark {
 .fv__point{
     margin-top: rem(60);
     @include mq(md) {
-        margin-top: rem(85);
+        margin-top: rem(82);
     }
 }
 
@@ -230,7 +234,7 @@ mark {
 }
 
 .fv__point-img{
-    margin-top: rem(21);
+    margin-top: rem(18);
     width: 100%;
     @include mq(md) {
         margin-top: rem(0);
@@ -257,7 +261,7 @@ mark {
 .fv__point-sentence{
     margin-top: rem(40.7);
     @include mq(md) {
-        margin-top: rem(20.7);
+        margin-top: rem(18.7);
     }
 }
 
@@ -266,8 +270,10 @@ mark {
     font-weight: $bold;
     line-height: 2;
     letter-spacing: 0.04em;
+    padding: 0 rem(11);
     @include mq(md) {
         font-size: rem(20);
+        padding: 0;
     }
 }
 

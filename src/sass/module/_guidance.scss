@@ -50,7 +50,7 @@
         background-position: calc(50% - 50%) center;
         background-repeat: no-repeat;
         background-size: 93.5% 100%;    
-        padding: rem(40) 0 rem(81);
+        padding: rem(40) 0 rem(80);
     }
 }
 
@@ -189,7 +189,6 @@
     margin-top: rem(80);
     @include mq(md) {
         background-image: url('../images/common/explanation-bg.jpg');
-        margin-top: rem(83);
     }
 }
 
@@ -257,7 +256,7 @@
 .guidance__explanation-sentence{
     margin-top: rem(43);
     @include mq(md) {
-        margin-top: rem(45);
+        margin-top: rem(41);
     }
 }
 
@@ -294,8 +293,8 @@
         background-position: calc(50% + 50%) center;
         background-repeat: no-repeat;
         background-size: 93.5% 100%; 
-        margin-top: rem(37);   
-        padding: rem(40) 0 rem(81);
+        margin-top: rem(40);   
+        padding: rem(40) 0 rem(80);
     }
 }
 

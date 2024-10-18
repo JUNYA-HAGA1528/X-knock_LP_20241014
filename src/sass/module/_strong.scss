@@ -96,7 +96,7 @@
 .strong__item + .strong__item{
     margin-top: rem(132);
     @include mq(md) {
-        margin-top: rem(120);
+        margin-top: rem(150);
     }
 }
 
@@ -204,7 +204,7 @@
     color: $white;
     display: flex;
     justify-content: center;
-    font-weight: $medium;
+    font-weight: $regular;
     font-size: rem(10.85);
     margin-top: rem(10);
     @include mq(md) {
@@ -413,6 +413,13 @@
         align-items: center;
         justify-content: center;
         gap: 0 rem(54);
+    }
+}
+
+.strong__service-buttons--margin{
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(40);
     }
 }
 
@@ -652,7 +659,7 @@
 .strong__review{
     padding: rem(66) 0 rem(60);
     @include mq(md) {
-        padding: rem(80) 0;
+        padding: rem(83) 0 rem(80);
     }
 }
 
@@ -687,7 +694,7 @@
 .strong__review-title{
     color: $green;
     font-size: rem(24);
-    font-weight: $bold;
+    font-weight: $semiBold;
 }
 
 .strong__review-content{
@@ -695,14 +702,14 @@
     margin: rem(66) auto auto 0; // 左側のパディングはそのまま
     @include mq(md) {
         width: 100%;
-        margin: rem(54) auto auto 0;
+        margin: rem(57) auto auto 0;
     }
 }
 
 .strong__review-wrapper + .strong__review-wrapper{
     margin-top: rem(40);
     @include mq(md) {
-        margin-top: rem(23);
+        margin-top: rem(20);
     }
 }
 
@@ -738,7 +745,7 @@
     line-height: calc(24/14);
     letter-spacing: 0.01em;
     @include mq(md) {
-        width: 71.12%;
+        width: 73%;
         font-size: rem(16);
         line-height: calc(24/16);
     }
@@ -845,7 +852,7 @@
 .strong__company-item + .strong__company-item{
     margin-top: rem(24.27);
     @include mq(md) {
-        margin-top: rem(16.6);
+        margin-top: rem(18.92);
     }
 }
 
@@ -879,10 +886,11 @@
 .strong__company-box dd {
     color: #444444;
     font-size: rem(15.74);
-    font-weight: $semiBold;
+    font-weight: $bold;
     width: 100%;
     margin-top: rem(14);
     @include mq(md) {
+        white-space: nowrap;
         text-align: left;
         width: 71.36%;
         margin-top: rem(0);

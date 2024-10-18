@@ -3,7 +3,7 @@
 .trends{
     padding: rem(66) 0 rem(80);
     @include mq(md) {
-        padding: rem(109) 0 rem(80);
+        padding: rem(100) 0 rem(73);
     }
 }
 
@@ -30,7 +30,7 @@
     margin: auto;
     padding: 0 rem(15);
     @include mq(md) {
-        max-width: rem(752);
+        max-width: rem(755);
         padding: 0 rem(20);
     }
 }
@@ -38,7 +38,7 @@
 .trends__list{
     margin-top: rem(40);
     @include mq(md) {
-        margin-top: rem(51);
+        margin-top: rem(60);
     }
 }
 
@@ -54,7 +54,7 @@
     font-size: rem(10.85);
     font-weight: $regular;
     @include mq(md) {
-        margin-top: rem(21);
+        margin-top: rem(20.76);
         font-size: rem(12);
     }
 }

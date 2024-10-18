@@ -28,12 +28,20 @@
 
 .button__text-font{
     color: $green;
-    font-weight: $bold;
+    font-weight: $medium;
     font-size: rem(15.11);
     line-height: calc(37.8/15.11);
-    @media screen {
+    @include mq(md) {
         font-size: rem(16);
         line-height: calc(40/16);
+    }
+}
+
+.button__text-font--font{
+    font-weight: $bold;
+    font-size: rem(16);
+    @include mq(md) {
+        font-size: rem(20.27);
     }
 }
 
