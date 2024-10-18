@@ -35,13 +35,28 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
     // strong__review-titleの点を消す
     window.addEventListener('resize', function() {
-        const titleElement = document.querySelector('.strong__review-title');
-        if (window.innerWidth <= 768) {
-          titleElement.innerHTML = "会社の評判<br class='u-mobile'>口コミ"; // 点を削除
-        } else {
-          titleElement.innerHTML = "会社の評判・<br class='u-mobile'>口コミ"; // 点を元に戻す
-        }
+        const titleElements = document.querySelectorAll('.strong__review-title'); // 複数の要素を取得
+        titleElements.forEach(function(titleElement) {
+            if (window.innerWidth <= 768) {
+                titleElement.innerHTML = "会社の評判<br class='u-mobile'>口コミ"; // 点を削除
+            } else {
+                titleElement.innerHTML = "会社の評判・<br class='u-mobile'>口コミ"; // 点を元に戻す
+            }
+        });
     });
+    
+    // ページロード時にも適用したい場合
+    window.addEventListener('load', function() {
+        const titleElements = document.querySelectorAll('.strong__review-title');
+        titleElements.forEach(function(titleElement) {
+            if (window.innerWidth <= 768) {
+                titleElement.innerHTML = "会社の評判<br class='u-mobile'>口コミ";
+            } else {
+                titleElement.innerHTML = "会社の評判・<br class='u-mobile'>口コミ";
+            }
+        });
+    });
+    
     
       // 初回ロード時にもチェック
     window.addEventListener('load', function() {

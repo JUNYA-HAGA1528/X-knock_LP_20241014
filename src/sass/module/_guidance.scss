@@ -38,28 +38,32 @@
 //guidance__first
 .guidance__first{
     position: relative;
-    background-image: url('../images/common/guidance-first-bg-sp.png');
-    background-position: calc(50% - 15px) center;
+    background-image: url('../images/common/guidance-first-bg.png');
+    background-position: calc(50% - 50%) center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    text-align: left;
+    background-size: 93.5% 100%;    
+    padding: rem(40) 0 rem(80);
     margin-top: rem(40);
-    padding: rem(20) 0 rem(59.05);
-    @include mq(md) {
-        background-image: url('../images/common/guidance-first-bg.png');
-        background-position: calc(50% - 50%) center;
+    @media (max-width: 1300px){
+        background-size: 99% 100%; 
+    } 
+    @media (max-width: 768px){
+        background-image: url('../images/common/guidance-first-bg-sp.png');
+        background-position: calc(50% - 15px) center;
         background-repeat: no-repeat;
-        background-size: 93.5% 100%;    
-        padding: rem(40) 0 rem(80);
+        background-size: 100% 100%;
+        text-align: left;
+        margin-top: rem(40);
+        padding: rem(20) 0 rem(59.05);
     }
 }
 
-.guidance-head__first-man{
+.guidance-head__first-man img{
     position: absolute;
-    top: -45px;
-    right: 6%;    
-    width: rem(110);
-    height: rem(165);
+    top: -9px;
+    right: 2%;    
+    width: rem(116);
+    height: rem(187);
     @include mq(md) {
         top: auto;
         bottom: 0px;
@@ -103,7 +107,7 @@
 
 .guidance__first-item {
     position: relative;
-    width: 50%;
+    width: 58%;
     margin: 0 auto;
     @include mq(md){
         max-width: calc(25% - 2.1875rem * 3 / 4 );
@@ -202,7 +206,7 @@
 }
 
 .guidance__explanation-wrapper{
-    padding: rem(32) rem(15) rem(61);
+    padding: rem(37) rem(15) rem(60);
     background: rgba(255, 255, 255, 0.7);
     @include mq(md) {
         padding: rem(32) rem(29) rem(61);
@@ -254,7 +258,7 @@
 }
 
 .guidance__explanation-sentence{
-    margin-top: rem(43);
+    margin-top: rem(40);
     @include mq(md) {
         margin-top: rem(41);
     }
@@ -281,22 +285,36 @@
 
 .guidance__second{
     position: relative;
-    background-image: url('../images/common/guidance-second-bg-sp.png');
-    background-position: calc(50% + 15px) center;
+    background-image: url('../images/common/guidance-second-bg.png');
+    background-position: calc(50% + 50%) center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    text-align: left;
-    margin-top: rem(81);
-    padding: rem(20) 0 rem(59.05);
-    @include mq(md) {
-        background-image: url('../images/common/guidance-second-bg.png');
-        background-position: calc(50% + 50%) center;
+    background-size: 93.5% 100%; 
+    margin-top: rem(40);   
+    padding: rem(40) 0 rem(80);
+    @media (max-width: 1300px){
+        background-size: 99% 100%; 
+    } 
+    @media (max-width: 768px){
+        background-image: url('../images/common/guidance-second-bg-sp.png');
+        background-position: calc(50% + 15px) center;
         background-repeat: no-repeat;
-        background-size: 93.5% 100%; 
-        margin-top: rem(40);   
-        padding: rem(40) 0 rem(80);
+        background-size: 100% 100%;
+        text-align: left;
+        margin-top: rem(80);
+        padding: rem(20) 0 rem(80);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 .guidance__second-inner{
     max-width: rem(890);
@@ -320,10 +338,9 @@
 .guidance-head__container {
     overflow-x: scroll;
     width: calc(100% + rem(25));  // 右側のパディングのみ補正
-    margin: rem(38) auto auto 0; // 左側のパディングはそのまま
+    margin: rem(40) auto auto auto;
     @include mq(md) {
         width: 100%;
-        margin: rem(40) auto auto auto;
     }
 }
 

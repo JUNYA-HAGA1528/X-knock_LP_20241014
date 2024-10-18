@@ -80,6 +80,20 @@
     object-fit: cover;
 }
 
+.trust-card__img {
+    overflow: hidden; /* 画像がはみ出さないようにする */
+}
+
+.trust-card__img img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s; /* 画像の縮小にアニメーションを追加 */
+}
+
+.trust-card__img img:hover {
+    transform: scale(0.97); /* マウスオーバーで画像を少し縮小 */
+}
+
 .trust-card__source{
     color: #222222;
     margin-top: rem(10);

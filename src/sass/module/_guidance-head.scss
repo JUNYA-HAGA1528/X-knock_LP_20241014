@@ -32,6 +32,8 @@
 }
 
 .guidance-head__first-title{
+    position: relative;
+    z-index: 100;
     color: #7C9B8C;
     font-size: rem(24);
     font-weight: $semiBold;
@@ -54,6 +56,14 @@
     }
 }
 
+.guidance-head__first-title--white{
+    text-shadow: 
+        1px 1px 0px white,  /* 右下に白い影 */
+        -1px 1px 0px white, /* 左下に白い影 */
+        1px -1px 0px white, /* 右上に白い影 */
+        -1px -1px 0px white; /* 左上に白い影 */
+}
+
 .guidance-head__first-border {
     align-self: center; /* 親要素内で上下中央に配置 */
     display: flex;
@@ -74,7 +84,7 @@
 .guidance-head__first-subtitle{
     color: #444;
     text-align: left;
-    margin-top: rem(40);
+    margin-top: rem(20);
     font-size: rem(16);
     font-weight: $medium;
     line-height: calc(26/16);
@@ -86,3 +96,4 @@
         line-height: 1.45;
     }
 }
+
