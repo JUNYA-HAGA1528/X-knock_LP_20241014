@@ -80,11 +80,23 @@
 
 
 
-//strong__name
-.strong__name{
+
+
+
+
+.strong__list{
     margin-top: rem(50);
+    padding-bottom: rem(80);
     @include mq(md) {
         margin-top: rem(80);
+        padding-bottom: rem(100);
+    }
+}
+
+.strong__item + .strong__item{
+    margin-top: rem(132);
+    @include mq(md) {
+        margin-top: rem(120);
     }
 }
 
@@ -117,6 +129,7 @@
 }
 
 .strong__name-review{
+    text-align: left;
     background-color: $white;
     color:#222;
     width: rem(315);
@@ -127,6 +140,7 @@
     @include mq(md) {
         width: 40.4%;
         font-size: rem(20);
+        padding-left: 7.57%;
     }
 }
 
@@ -135,6 +149,8 @@
 }
 
 .strong__name-title{
+    position: relative;
+    z-index: 100;
     white-space: nowrap;
     color: $green;
     font-size: rem(28);
@@ -519,58 +535,340 @@
 
 
 
-
+// 売却実績
 .table-container {
     background-color: #00692d; /* 緑の背景色 */
-    padding: 20px;
     border-radius: 10px; /* 角を丸める */
-    max-width: 630px; /* 合計幅の調整 */
-    margin: 0 auto; /* 中央揃え */
-  }
-  
-  .custom-table {
+    max-width: 636px; /* 合計幅の調整 */
+    margin: rem(40) auto 0; /* 中央揃え */
+    @include mq(md) {
+        margin: rem(30) auto 0; /* 中央揃え */
+    }
+}
+
+.custom-table {
     width: 100%;
     border-collapse: collapse;
     background-color: #fff; /* 白背景 */
     border-radius: 10px;
     overflow: hidden; /* 角の部分を隠すためにoverflow */
-  }
-  
-  .custom-table th, .custom-table td {
+}
+
+.custom-table th, .custom-table td {
     text-align: center;
-    padding: 10px;
+    padding: rem(14) 0;
     border-bottom: 1px dotted #8d734a; /* ドットの線 */
-  }
-  
-  .custom-table thead th {
-    background-color: #b4bb27; /* 黄緑色の背景 */
-    color: #fff;
+}
+
+.custom-table thead th {
+    background-color: $lightgreen; /* 黄緑色の背景 */
+    color: #724A1E;
     font-weight: bold;
-    font-size: 16px;
+    font-size: rem(12.66);
+    font-weight: $medium;
+    line-height: calc(16.8/12.6);
     border-bottom: none; /* 下線を削除 */
-  }
-  
-  .custom-table tbody tr:last-child td {
+    @include mq(md) {
+        font-size: rem(16);
+        line-height: calc(28/16);
+        letter-spacing: 0.01em;
+    }
+}
+
+.custom-table tbody tr:last-child td {
     border-bottom: none; /* 最後の行のボーダーを削除 */
-  }
-  
-  .custom-table tbody td {
-    color: #8d734a; /* 茶色の文字色 */
-    font-size: 14px;
-  }
-  
+}
+
+.custom-table tbody td {
+    color: #724A1E;
+    font-weight: bold;
+    font-size: rem(12.66);
+    font-weight: $medium;
+    line-height: calc(16.8/12.6);
+    @include mq(md) {
+        font-size: rem(16);
+        line-height: calc(28/16);
+        letter-spacing: 0.01em;
+    }
+}
+
   /* 各列の幅の設定 */
-  .custom-table th:nth-child(1), .custom-table td:nth-child(1) {
+.custom-table th:nth-child(1), .custom-table td:nth-child(1) {
     width: 200px; /* 物件種別の幅 */
-  }
-  
-  .custom-table th:nth-child(2), .custom-table td:nth-child(2) {
+}
+
+.custom-table th:nth-child(2), .custom-table td:nth-child(2) {
     width: 230px; /* 階数の幅 */
     border-left: 1px dotted #8d734a; /* 左側の点線 */
     border-right: 1px dotted #8d734a; /* 右側の点線 */
-  }
-  
-  .custom-table th:nth-child(3), .custom-table td:nth-child(3) {
+}
+
+.custom-table th:nth-child(3), .custom-table td:nth-child(3) {
     width: 200px; /* 専用面積の幅 */
-  }
-  
+}
+
+.strong__achievements-name-source{
+    color: $white;
+    display: flex;
+    justify-content: center;
+    font-weight: $regular;
+    font-size: rem(10.85);
+    margin-top: rem(20);
+    @include mq(md) {
+        margin-top: rem(10);
+        font-size: rem(10);
+        font-weight: $medium;
+    }
+}
+
+.strong__achievements-name-source-text{
+    text-decoration: underline;
+}
+
+.strong__achievements-name-source-text a:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+
+
+
+
+
+
+// 会社の評判・口コミ
+.strong__review{
+    padding: rem(66) 0 rem(60);
+    @include mq(md) {
+        padding: rem(80) 0;
+    }
+}
+
+.strong__review-inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(15);
+    @include mq(md) {
+        max-width: rem(821);
+        padding: 0 rem(20);
+    }
+}
+
+.strong__review-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 rem(10) ;
+    @include mq(md) {
+        gap: 0 rem(29);
+    }
+}
+
+.strong__review-head-line{
+    width: rem(100);
+    height: rem(7.3);
+    @include mq(md) {
+        width: rem(253);
+    }
+}
+
+.strong__review-title{
+    color: $green;
+    font-size: rem(24);
+    font-weight: $bold;
+}
+
+.strong__review-content{
+    width: calc(100% + rem(15));  // 右側のパディングのみ補正
+    margin: rem(66) auto auto 0; // 左側のパディングはそのまま
+    @include mq(md) {
+        width: 100%;
+        margin: rem(54) auto auto 0;
+    }
+}
+
+.strong__review-wrapper + .strong__review-wrapper{
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(23);
+    }
+}
+
+.strong__review-sentence{
+    background-color: $lightgreen;    
+    max-width: rem(665);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap:0 rem(7.49) ;
+    border-top-left-radius: rem(64.3); /* 左上を丸く */
+    border-bottom-left-radius: rem(64.3); /* 左下を丸く */
+    overflow: hidden; /* 内容がボックスの外に出ないようにする */
+    @include mq(md) {
+        gap: 0 rem(26.49);
+        border-radius: rem(64.3);
+    }
+}
+
+.strong__review-img{
+    width: 28.73%;
+    @include mq(md) {
+        width: 18.34%;
+    }
+}
+
+.strong__review-text{
+    width: 60%;
+    text-align: left;
+    color: $white;
+    font-size: rem(14);
+    font-weight: $medium;
+    line-height: calc(24/14);
+    letter-spacing: 0.01em;
+    @include mq(md) {
+        width: 71.12%;
+        font-size: rem(16);
+        line-height: calc(24/16);
+    }
+}
+
+.strong__review-name-source{
+    color: #444;
+    display: flex;
+    justify-content: center;
+    font-weight: $regular;
+    margin-top: rem(10);
+    @include mq(md) {
+        font-size: rem(10);
+    }
+}
+
+.strong__review-name-source-text{
+    text-decoration: underline;
+}
+
+.strong__review-name-source-text a:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+
+
+
+
+// 会社概要
+.strong__company{
+    background-image: url('../images/common/strong__company-bg-sp.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include mq(md) {
+        background-image: url('../images/common/strong__company-bg.jpg');
+    }
+}
+
+.strong__company-inner{
+    max-width: $max-width;
+    margin: auto;
+    @include mq(md) {
+        max-width: rem(883);
+        padding: 0 rem(20);
+    }
+}
+
+.strong__company-content{
+    background: rgba(255, 255, 255, 0.9);
+    padding: rem(40) rem(28);
+    @include mq(md) {
+        padding: rem(40) 0 rem(60);
+    }
+}
+
+.strong__company-head-img{
+    margin-top: rem(6);
+    @include mq(md) {
+        margin-top: rem(7);
+    }
+}
+
+.strong__company-head-img img{
+    width: rem(35.94);
+    height: rem(32.63);
+    margin: 0 auto;
+    @include mq(md) {
+        width: rem(43.94);
+        height: rem(39.89);
+    }
+}
+
+.strong__company-title{
+    color: $green;
+    font-size: rem(24);
+    font-weight: $bold;
+    @include mq(md) {
+        margin-top: rem(5);
+        font-size: rem(32);
+    }
+}
+
+.strong__company-title-img{
+    width: rem(240);
+    height: rem(5);
+    margin: rem(10) auto 0;
+    @include mq(md) {
+        width: rem(346);
+        height: rem(7.3);
+        margin: rem(7) auto 0;
+    }
+}
+
+.strong__company-list{
+    margin-top: rem(28.83);
+    @include mq(md) {
+        max-width: rem(443);
+        margin: rem(31.7) auto 0;
+    }
+}
+
+.strong__company-item + .strong__company-item{
+    margin-top: rem(24.27);
+    @include mq(md) {
+        margin-top: rem(16.6);
+    }
+}
+
+.strong__company-box{
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 rem(20.82);
+    }
+}
+
+.strong__company-box dt {
+    color: $green;
+    font-size: rem(15.74);
+    font-weight: $semiBold;
+    width: 100%;
+    @include mq(md) {
+        width: 24.37%;
+    }
+}
+
+.strong__company-box dd {
+    color: #444444;
+    font-size: rem(15.74);
+    font-weight: $semiBold;
+    width: 100%;
+    margin-top: rem(14);
+    @include mq(md) {
+        text-align: left;
+        width: 71.36%;
+        margin-top: rem(0);
+    }
+}
+
+.strong__company-link{
+    text-decoration: underline;
+}
