@@ -48,3 +48,8 @@
     width: rem(21);
     height: rem(21);
 }
+
+.header-nav__link:hover .header-nav__icon {
+    transform: translateX(5px); /* 画像を右に10px移動 */
+    transition: transform 0.3s ease; /* スムーズな移動 */
+}

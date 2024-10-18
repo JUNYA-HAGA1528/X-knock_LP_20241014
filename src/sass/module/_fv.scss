@@ -196,7 +196,10 @@ mark {
     }
 }
 
-
+.fv__area-item:hover img {
+    transition: 0.3s;
+    transform: scale(1.07); /* マウスオーバー時に画像を10%拡大 */
+}
 
 
 

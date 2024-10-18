@@ -178,15 +178,27 @@
     }
 }
 
+.strong__name-img {
+    overflow: hidden; /* 親要素から画像がはみ出さないようにする */
+}
+
 .strong__name-img img {
     aspect-ratio: 340/214;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s; /* 画像の縮小にアニメーションを追加 */
+    transform: scale(1); /* 通常時は1倍の大きさ */
     @include mq(md) {
         aspect-ratio: 541/341;
     }
 }
+
+.strong__name-img img:hover {
+    transform: scale(0.97); /* マウスオーバーで画像を少し縮小 */
+}
+
+
 
 .strong__name-source{
     color: $white;
@@ -844,6 +856,14 @@
         justify-content: center;
         gap: 0 rem(20.82);
     }
+}
+
+.strong__company-box a{
+    transition: 0.5a;
+}
+
+.strong__company-box a:hover{
+    opacity: 0.5;
 }
 
 .strong__company-box dt {

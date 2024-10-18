@@ -41,14 +41,41 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         } else {
           titleElement.innerHTML = "会社の評判・<br class='u-mobile'>口コミ"; // 点を元に戻す
         }
-      });
-      
+    });
+    
       // 初回ロード時にもチェック
-      window.addEventListener('load', function() {
+    window.addEventListener('load', function() {
         const titleElement = document.querySelector('.strong__review-title');
         if (window.innerWidth <= 768) {
           titleElement.innerHTML = "会社の評判<br class='u-mobile'>口コミ"; // 点を削除
         }
-      });
-      
+    });
+    
+    //ページ内スクロール設定
+    document.querySelectorAll('.fv__area-item').forEach(function(anchor) {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault(); // デフォルトのスクロール動作をキャンセル
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+    
+            // スクロール位置を調整する
+            const offset = 200; // 100px下に移動
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+    
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+
+    document.querySelector('.header__logo a').addEventListener('click', function(event) {
+        event.preventDefault(); // リンクのデフォルトの動作を防ぐ
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // スムーズスクロール
+        });
+    });
+    
 });

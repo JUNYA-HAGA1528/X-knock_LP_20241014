@@ -45,3 +45,8 @@
     width: rem(21);
     height: rem(21);
 }
+
+.fv-nav__link:hover .fv-nav__icon {
+    transform: translateX(5px); /* 画像を右に10px移動 */
+    transition: transform 0.3s ease; /* スムーズな移動 */
+}
