@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.pagetop {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 1000;
+    display: none; /* 初期状態で確実に非表示にする */
+    flex-direction: column; /* 縦方向に要素を並べる */
+    align-items: flex-end; /* 子要素を右寄せに */
+}
+
+
+.pagetop a {
+    transition: 0.5s;
+}
+
+.pagetop__img-top a img,
+.pagetop__img-bottom a img {
+    display: block; /* 画像をブロックレベルにすることで、画像のみのクリック領域を確保 */
+}
+
+.pagetop a:hover {
+    opacity: 0.8;
+}
+
+
+.pagetop__img-top img {
+    width: 15%;
+    height: 15%;
+    margin-left: auto;
+    @include mq(md) {
+        width: 13%;
+        height: 13%;
+    }
+}
+
+.pagetop__img-bottom img {
+    width: 40%;
+    height: rem(80);
+    margin-left: auto;
+    @include mq(md) {
+        height: rem(150);
+    }
+}
+
+

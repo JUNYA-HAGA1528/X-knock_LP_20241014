@@ -92,5 +92,27 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             behavior: 'smooth' // スムーズスクロール
         });
     });
+
+
+
+// 初期状態を確認して表示・非表示を切り替える関数
+function togglePagetopVisibility() {
+    var pagetop = document.querySelector('.pagetop');
+    var scrollY = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollY > 500) {  // スクロールが500pxを超えたら表示
+        pagetop.style.display = 'block';
+    } else {
+        pagetop.style.display = 'none';
+    }
+}
+
+// ページ読み込み時に表示・非表示を確認（DOMContentLoadedとloadを使用）
+window.addEventListener('DOMContentLoaded', togglePagetopVisibility);
+window.addEventListener('load', togglePagetopVisibility); // ページ全体の読み込みが完了したとき
+
+// スクロール時に表示・非表示を確認
+window.addEventListener('scroll', togglePagetopVisibility);
+
     
 });
