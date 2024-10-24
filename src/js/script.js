@@ -95,11 +95,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
     
     //ページ内スクロール設定
-    document.querySelectorAll('a[href="#hitotoki"], a[href="#daiti"], a[href="#sakura"]').forEach(function(anchor) {
+    document.querySelectorAll('a[href="#hitotoki"], a[href="#daiti"], a[href="#sakura"], a[href="#trends1"], a[href="#trends2"], a[href="#trends3"], a[href="#trends4"]').forEach(function(anchor) {
         anchor.addEventListener('click', function(event) {
             event.preventDefault(); // デフォルトのアンカージャンプ動作を無効にします
             const target = document.querySelector(this.getAttribute('href'));
-            const offset = 200; // スクロールを200px下に調整
+            const offset = 100; // スクロールを200px下に調整
     
             window.scrollTo({
                 top: target.offsetTop - offset,
