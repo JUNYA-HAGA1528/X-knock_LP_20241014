@@ -508,7 +508,7 @@
     background-color: $green;
     padding: rem(60) 0 rem(50);
     @include mq(md) {
-        padding: rem(40) 0;
+        padding: rem(40) 0 rem(94.16);
     }
 }
 
@@ -517,7 +517,7 @@
     margin: auto;
     padding: 0 rem(15);
     @include mq(md) {
-        max-width: rem(723);
+        max-width: rem(897);
         padding: 0 rem(20);
     }
 }
@@ -557,98 +557,88 @@
 
 // 売却実績
 .table-container {
+    overflow-x: scroll;
+    width: calc(100% + rem(25));  // 右側のパディングのみ補正
     background-color: #00692d; /* 緑の背景色 */
     border-radius: 10px; /* 角を丸める */
-    max-width: 636px; /* 合計幅の調整 */
     margin: rem(40) auto 0; /* 中央揃え */
     @include mq(md) {
-        margin: rem(30) auto 0; /* 中央揃え */
+        margin: rem(40) auto 0; /* 中央揃え */
+        width: 100%;
     }
 }
 
-.custom-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #fff; /* 白背景 */
-    border-radius: 5px;
-    overflow: hidden; /* 角の部分を隠すためにoverflow */
-}
-
-.custom-table th, .custom-table td {
-    text-align: center;
-    padding: rem(14) 0;
-    border-bottom: 1px dotted #8d734a; /* ドットの線 */
-}
-
-.custom-table thead th {
-    background-color: $lightgreen; /* 黄緑色の背景 */
-    color: #724A1E;
-    font-weight: bold;
-    font-size: rem(12.66);
-    font-weight: $medium;
-    line-height: calc(16.8/12.6);
-    border-bottom: none; /* 下線を削除 */
+.table__img {
+    width: rem(830);
+    height: rem(258);
     @include mq(md) {
-        font-size: rem(16);
-        line-height: calc(28/16);
-        letter-spacing: 0.01em;
+        width: 100%;
+        height: 100%;
     }
 }
 
-.custom-table tbody tr:last-child td {
-    border-bottom: none; /* 最後の行のボーダーを削除 */
-}
+// .custom-table {
+//     width: 100%;
+//     border-collapse: collapse;
+//     background-color: #fff; /* 白背景 */
+//     border-radius: 5px;
+//     overflow: hidden; /* 角の部分を隠すためにoverflow */
+// }
 
-.custom-table tbody td {
-    color: #724A1E;
-    font-weight: bold;
-    font-size: rem(12.66);
-    font-weight: $medium;
-    line-height: calc(16.8/12.6);
-    @include mq(md) {
-        font-size: rem(16);
-        line-height: calc(28/16);
-        letter-spacing: 0.01em;
-    }
-}
+// .custom-table th, .custom-table td {
+//     text-align: center;
+//     padding: rem(14) 0;
+//     border-bottom: 1px dotted #8d734a; /* ドットの線 */
+// }
 
-  /* 各列の幅の設定 */
-.custom-table th:nth-child(1), .custom-table td:nth-child(1) {
-    width: 200px; /* 物件種別の幅 */
-}
+// .custom-table thead th {
+//     background-color: $lightgreen; /* 黄緑色の背景 */
+//     color: #724A1E;
+//     font-weight: bold;
+//     font-size: rem(12.66);
+//     font-weight: $medium;
+//     line-height: calc(16.8/12.6);
+//     border-bottom: none; /* 下線を削除 */
+//     @include mq(md) {
+//         font-size: rem(16);
+//         line-height: calc(28/16);
+//         letter-spacing: 0.01em;
+//     }
+// }
 
-.custom-table th:nth-child(2), .custom-table td:nth-child(2) {
-    width: 230px; /* 階数の幅 */
-    border-left: 1px dotted #8d734a; /* 左側の点線 */
-    border-right: 1px dotted #8d734a; /* 右側の点線 */
-}
+// .custom-table tbody tr:last-child td {
+//     border-bottom: none; /* 最後の行のボーダーを削除 */
+// }
 
-.custom-table th:nth-child(3), .custom-table td:nth-child(3) {
-    width: 200px; /* 専用面積の幅 */
-}
+// .custom-table tbody td {
+//     color: #724A1E;
+//     font-weight: bold;
+//     font-size: rem(12.66);
+//     font-weight: $medium;
+//     line-height: calc(16.8/12.6);
+//     @include mq(md) {
+//         font-size: rem(16);
+//         line-height: calc(28/16);
+//         letter-spacing: 0.01em;
+//     }
+// }
 
-.strong__achievements-name-source{
-    color: $white;
-    display: flex;
-    justify-content: center;
-    font-weight: $regular;
-    font-size: rem(10.85);
-    margin-top: rem(20);
-    @include mq(md) {
-        margin-top: rem(10);
-        font-size: rem(10);
-        font-weight: $medium;
-    }
-}
+//   /* 各列の幅の設定 */
+// .custom-table th:nth-child(1), .custom-table td:nth-child(1) {
+//     width: 200px; /* 物件種別の幅 */
+// }
 
-.strong__achievements-name-source-text{
-    text-decoration: underline;
-}
+// .custom-table th:nth-child(2), .custom-table td:nth-child(2) {
+//     width: 230px; /* 階数の幅 */
+//     border-left: 1px dotted #8d734a; /* 左側の点線 */
+//     border-right: 1px dotted #8d734a; /* 右側の点線 */
+// }
 
-.strong__achievements-name-source-text a:hover{
-    opacity: 0.5;
-    transition: 0.3s;
-}
+// .custom-table th:nth-child(3), .custom-table td:nth-child(3) {
+//     width: 200px; /* 専用面積の幅 */
+// }
+
+
 
 
 

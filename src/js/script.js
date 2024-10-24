@@ -93,26 +93,40 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         });
     });
 
+    
+    //ページ内スクロール設定
+    document.querySelectorAll('a[href="#hitotoki"], a[href="#daiti"], a[href="#sakura"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault(); // デフォルトのアンカージャンプ動作を無効にします
+            const target = document.querySelector(this.getAttribute('href'));
+            const offset = 200; // スクロールを200px下に調整
+    
+            window.scrollTo({
+                top: target.offsetTop - offset,
+                behavior: 'smooth' // スムーズスクロール
+            });
+        });
+    });
 
 
-// 初期状態を確認して表示・非表示を切り替える関数
-function togglePagetopVisibility() {
-    var pagetop = document.querySelector('.pagetop');
-    var scrollY = window.scrollY || document.documentElement.scrollTop;
 
-    if (scrollY > 500) {  // スクロールが500pxを超えたら表示
-        pagetop.style.display = 'block';
-    } else {
-        pagetop.style.display = 'none';
+    // 初期状態を確認して表示・非表示を切り替える関数
+    function togglePagetopVisibility() {
+        var pagetop = document.querySelector('.pagetop');
+        var scrollY = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollY > 500) {  // スクロールが500pxを超えたら表示
+            pagetop.style.display = 'block';
+        } else {
+            pagetop.style.display = 'none';
+        }
     }
-}
 
-// ページ読み込み時に表示・非表示を確認（DOMContentLoadedとloadを使用）
-window.addEventListener('DOMContentLoaded', togglePagetopVisibility);
-window.addEventListener('load', togglePagetopVisibility); // ページ全体の読み込みが完了したとき
+    // ページ読み込み時に表示・非表示を確認（DOMContentLoadedとloadを使用）
+    window.addEventListener('DOMContentLoaded', togglePagetopVisibility);
+    window.addEventListener('load', togglePagetopVisibility); // ページ全体の読み込みが完了したとき
 
-// スクロール時に表示・非表示を確認
-window.addEventListener('scroll', togglePagetopVisibility);
-
+    // スクロール時に表示・非表示を確認
+    window.addEventListener('scroll', togglePagetopVisibility);
     
 });
