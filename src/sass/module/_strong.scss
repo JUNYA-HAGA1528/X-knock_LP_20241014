@@ -883,3 +883,24 @@
 .strong__company-link{
     text-decoration: underline;
 }
+
+
+
+
+.table__review-name-source{
+    color: $white;
+    display: flex;
+    justify-content: center;
+    font-weight: $regular;
+    margin-top: rem(10);
+    font-size: rem(10);
+}
+
+.table__review-name-source-text{
+    text-decoration: underline;
+}
+
+.table__review-name-source-text a:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+}

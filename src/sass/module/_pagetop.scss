@@ -13,35 +13,38 @@
 
 
 .pagetop a {
+    display: inline-block; /* リンク領域を画像サイズに限定 */
     transition: 0.5s;
+    width: auto; /* 画像のサイズに応じてリンク領域を設定 */
 }
 
-.pagetop__img-top a img,
-.pagetop__img-bottom a img {
-    display: block; /* 画像をブロックレベルにすることで、画像のみのクリック領域を確保 */
-}
 
 .pagetop a:hover {
     opacity: 0.8;
 }
 
+.pagetop__img-top {
+    display: flex;
+    justify-content: flex-end; /* 右寄せ */
+}
 
 .pagetop__img-top img {
-    width: 25%;
-    height: 25%;
-    margin-left: auto;
+    width: 100%;
+    height: rem(90);
     @include mq(md) {
-        width: 13%;
-        height: 13%;
+        height: rem(200);
     }
+}
+
+.pagetop__img-bottom {
+    display: flex;
+    justify-content: flex-end; /* 右寄せ */
 }
 
 .pagetop__img-bottom img {
     width: 100%;
     height: rem(90);
-    margin-left: auto;
     @include mq(md) {
-        width:37%;
         height: rem(150);
     }
 }
